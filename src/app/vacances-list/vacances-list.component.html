@@ -1,0 +1,29 @@
+<div class="video">
+	<a href="../../assets/video/Les plus beaux paysages du monde - une vidéo à couper le souffle !.mov"
+		title="Presentation"></a>
+</div>
+<div class="liste" *ngFor="let vacances of vacances; index as vacancesId">
+
+	<div class="row">
+		<div class="col-lg-5">
+			<h3>
+				<a [title]="vacances.name + ' details'" [routerLink]="['/vacances', vacancesId]">
+					{{ vacances.name }}
+				</a>
+			</h3>
+		</div>
+		<div class="col-lg-5">
+			<p *ngIf="vacances.description">
+				Description: {{ vacances.description }}
+			</p>
+			<p *ngIf="vacances.price">
+				Prix: {{ vacances.price }}
+			</p>
+			<button (click)="disponibility()" class="btn btn-primary">
+				Share
+			</button>
+		</div>
+		<app-vacances-alerts [vacances]="vacances" (notify)="onNotify()">
+		</app-vacances-alerts>
+	</div>
+</div>
