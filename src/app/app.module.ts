@@ -25,6 +25,15 @@ import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
       { path: '', component: VacancesListComponent },
       { path: 'vacances/:vacancesId', component: VacancesDetailsComponent },
       { path: 'cart', component: CartComponent },
+      {
+        path: 'projet', component: PageConnexionComponent, children: [
+          { path: 'inscription', component: InscriptionComponent },
+          { path: 'home', component: HomeComponent },
+          { path: 'erreur', component: ErreurComponent },
+        ]
+      }
+
+
     ])
   ],
   declarations: [

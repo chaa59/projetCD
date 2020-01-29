@@ -1,6 +1,7 @@
 <header class="topbar">
     <div class="row">
         <div class="col-lg-1">
+            <a [routerLink]="['/']"><img src="../../assets/image/logo.png" style="width: 130px; border-radius: 20px;" />
             <a [routerLink]="['/']"><img src="../../assets/image/logo.png" style="width: 130px; border-radius: 20px;"/> 
             </a>
         </div>
@@ -14,9 +15,8 @@
         <div class="col-lg-3">
         </div>
         <div class="col-lg-1">
+            <a [routerLink]="['/projet/inscription']" class="btn btn-warning social">Connexion</a>
             <br/><input type="submit" (click)="connexion()" value="Connexion"/>
-<!-- 
-            <a [routerLink]="['/connexion']" class="btn btn-warning social">Connexion</a> -->
 
         </div>
         <div class="col-lg-1">
@@ -27,4 +27,3 @@
 
     </div>
 </header>
-<div class="banniere"></div>
