@@ -33,6 +33,7 @@ import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
         ]
       }
 
+
     ])
   ],
   declarations: [
