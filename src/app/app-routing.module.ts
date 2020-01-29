@@ -21,14 +21,6 @@ const routes: Routes = [
         ]
       }
     ]
-    path: 'cart', component: CartComponent, children: [
-
-    {path: 'projet', component: PageConnexionComponent, children: [
-      { path: 'inscription', component: InscriptionComponent },
-      { path: 'home', component: HomeComponent },
-      { path: 'erreur', component: ErreurComponent },
-    ]}
-  ]
 
   },
   { path: '', redirectTo: '/projet', pathMatch: 'full' }

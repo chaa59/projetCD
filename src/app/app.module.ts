@@ -14,6 +14,7 @@ import { PageConnexionComponent } from './PageConnexion/page-connexion.component
 import { InscriptionComponent } from './PageConnexion/inscription/inscription.component';
 import { HomeComponent } from './PageConnexion/home/home.component';
 import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
+import { ShippingComponent } from './shipping/shipping.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
       { path: '', component: VacancesListComponent },
       { path: 'vacances/:vacancesId', component: VacancesDetailsComponent },
       { path: 'cart', component: CartComponent },
+      { path: 'shipping', component: ShippingComponent},
       {
         path: 'projet', component: PageConnexionComponent, children: [
           { path: 'inscription', component: InscriptionComponent },
@@ -45,7 +47,8 @@ import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
     PageConnexionComponent,
     InscriptionComponent,
     HomeComponent,
-    ErreurComponent
+    ErreurComponent,
+    ShippingComponent
   ],
   bootstrap: [AppComponent],
   providers: [CartService]

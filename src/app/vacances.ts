@@ -6,22 +6,22 @@ export const vacances = [
   },
   {
     name: 'Portugal',
-    price: 699,
+    price: 799,
     description: 'Chaleeeuuuuuuur'
   },
   {
     name: 'Royaume-Uni',
-    price: 299,
+    price: 799,
     description: 'Chaleeeuuuuuuur'
   },
   {
     name: 'Allemagne',
-    price: 299,
+    price: 799,
     description: 'Chaleeeuuuuuuur'
   },
   {
     name: 'France',
-    price: 299,
+    price: 799,
     description: 'Chaleeeuuuuuuur'
   },
 
