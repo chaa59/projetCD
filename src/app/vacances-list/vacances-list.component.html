@@ -1,29 +1,101 @@
-<div class="video">
-	<a href="../../assets/video/Les plus beaux paysages du monde - une vidéo à couper le souffle !.mov"
-		title="Presentation"></a>
-</div>
-<div class="liste" *ngFor="let vacances of vacances; index as vacancesId">
 
-	<div class="row">
+<div class="row">
+	<div class="sidebar">
 		<div class="col-lg-5">
+			<h4 class="sidebar-title">Filtres</h4>
+			<ul>
+				<li><span>Date</span></li>
+				<div style="text-align: center;">
+					<br>
+					<tr>
+						<td>L</td>
+						<td>M</td>
+						<td>M</td>
+						<td>J</td>
+						<td>V</td>
+						<td>S</td>
+						<td>D</td>
+					</tr>
+					<tr>
+						<td><input type="button" value="1" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="2" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="3" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="4" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="5" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="6" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="7" onclick="alert('Coucou.')"></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="8" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="6" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="10" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="11" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="12" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="13" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="14" onclick="alert('Coucou.')"></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="15" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="16" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="17" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="18" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="19" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="20" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="21" onclick="alert('Coucou.')"></td>
+					</tr>
+
+					<tr>
+						<td><input type="button" value="22" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="23" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="24" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="25" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="26" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="27" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="28" onclick="alert('Coucou.')"></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="29" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="30" onclick="alert('Coucou.')"></td>
+						<td><input type="button" value="31" onclick="alert('Coucou.')"></td>
+					</tr>
+					
+				</div>
+				<br>
+				<br>s
+				<li>Nombre de passager</li>
+				<input type="text" value="1" />
+				<br>
+				<br>
+				<li>Lieu</li>
+				<input type="text" value="France" />
+				<br>
+				<br>
+				<li>Prix</li>
+				<td>Min<input type="text" value="min"></td>
+				<br>
+				<td>Max<input type="text" value="max" onclick="alert('Coucou.')"></td>
+
+			</ul>
+			<hr>
+		</div>
+	</div>
+
+	<div class="col-lg-7" style="text-align: center;">
+		<div *ngFor="let vacances of vacances; index as vacancesId">
+
 			<h3>
 				<a [title]="vacances.name + ' details'" [routerLink]="['/vacances', vacancesId]">
 					{{ vacances.name }}
 				</a>
 			</h3>
-		</div>
-		<div class="col-lg-5">
 			<p *ngIf="vacances.description">
 				Description: {{ vacances.description }}
 			</p>
 			<p *ngIf="vacances.price">
 				Prix: {{ vacances.price }}
 			</p>
-			<button (click)="disponibility()" class="btn btn-primary">
-				Share
-			</button>
+			<hr>
 		</div>
-		<app-vacances-alerts [vacances]="vacances" (notify)="onNotify()">
-		</app-vacances-alerts>
+
 	</div>
 </div>

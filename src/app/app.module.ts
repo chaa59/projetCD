@@ -6,12 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { VacancesListComponent } from './vacances-list/vacances-list.component';
-import { VacancesAlertsComponent } from './vacances-alerts/vacances-alerts.component';
 import { VacancesDetailsComponent } from './vacances-details/vacances-details.component';
 import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
-import { ShippingComponent } from './shipping/shipping.component';
 import { FilterPipeModule } from 'ngx-filter-pipe';
+import { PageConnexionComponent } from './PageConnexion/page-connexion.component';
+import { InscriptionComponent } from './PageConnexion/inscription/inscription.component';
+import { HomeComponent } from './PageConnexion/home/home.component';
+import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
 
 @NgModule({
   imports: [
@@ -23,17 +25,18 @@ import { FilterPipeModule } from 'ngx-filter-pipe';
       { path: '', component: VacancesListComponent },
       { path: 'vacances/:vacancesId', component: VacancesDetailsComponent },
       { path: 'cart', component: CartComponent },
-      { path: 'shipping', component: ShippingComponent },
     ])
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
     VacancesListComponent,
-    VacancesAlertsComponent,
     VacancesDetailsComponent,
     CartComponent,
-    ShippingComponent
+    PageConnexionComponent,
+    InscriptionComponent,
+    HomeComponent,
+    ErreurComponent
   ],
   bootstrap: [AppComponent],
   providers: [CartService]

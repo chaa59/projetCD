@@ -1,6 +1,5 @@
 <h3>Panier</h3>
 
-
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }} </span>
   <span>{{ item.price | currency }}</span>
@@ -9,8 +8,3 @@
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
   <button class="btn btn-danger" >Valider</button>
 </form>
-
-
-<p>
-  <a routerLink="/shipping">Shipping Prices</a>
-</p>
