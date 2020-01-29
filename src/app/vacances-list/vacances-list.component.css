@@ -1,0 +1,68 @@
+.sidebar {
+    position: relative;
+    float: left;
+    width: 300px;
+    padding: 40px;
+    font-size: 17px;
+    background-color: rgb(212, 228, 224);
+}
+
+.title {
+    font-size: 30px;
+    color: #000;
+    margin: 15px 0;
+}
+
+.sidebar {
+    position: relative;
+    float: right;
+    width: 300px;
+    padding: 40px;
+    font-size: 17px;
+    z-index: 1;
+}
+
+.sidebar-title {
+    font-size: 30px;
+    color: #000;
+    margin: 15px 0;
+}
+
+.sidebar-title:first-child {
+    margin-top: 0;
+}
+
+.sidebar a {
+    color: #9f9f9f;
+    text-decoration: none;
+}
+
+.sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 6px 0;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.sidebar hr {
+    border: none;
+    background: #c4c4c4;
+    height: 1px;
+    margin: 50px 0;
+}
+
+.banniere {
+    height: 400px;
+    background: no-repeat center / cover url("../../assets/image/fond1.jpg");
+    padding: 0;
+    margin: 0;
+    
+}
+

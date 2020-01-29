@@ -1,0 +1,14 @@
+[
+  {
+    "type": "Voyage par bateau",
+    "price": 25.99
+  },
+  {
+    "type": "Voyage par train",
+    "price": 9.99
+  },
+  {
+    "type": "Voyage par avion",
+    "price": 2.99
+  }
+]

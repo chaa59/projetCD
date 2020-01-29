@@ -1,0 +1,42 @@
+<div class="cart-item" *ngFor="let item of items">
+  <table>
+    <ul>
+      <li><span>{{ item.name }}</span><br></li>
+      <li> <span>{{ item.description}}</span><br>
+      </li>
+      <li> <span>{{ item.price | currency }}</span>
+      </li>
+    </ul>
+  </table>
+
+</div>
+<hr>
+<br>
+<div class="paiement" style="text-align: center;">
+  <h1>Mon paiement</h1>
+
+  <p style="text-decoration: underline;">Choississez votre type de paiement:</p>
+
+  <div>
+    <input type="checkbox" id="Visa" name="Visa" checked>
+    <label for="Visa">Visa</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="MasterCard" name="MasterCard">
+    <label for="MasterCard">MasterCard</label>
+  </div>
+
+  <br>
+
+  <p style="text-decoration: underline;">Prenez connaissance des taxes:</p>
+
+  <p>
+    <a routerLink="/shipping">Taxes</a>
+  </p>
+</div>
+
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+</form>
