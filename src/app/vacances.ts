@@ -2,7 +2,7 @@ export const vacances = [
   {
     name: 'Espagne',
     price: 799,
-    description: 'La chaleur est à son rendez-vous'
+    description: 'La chaleur est à son rendez-vous',
   },
   {
     name: 'Portugal',
@@ -10,7 +10,7 @@ export const vacances = [
     description: 'Chaleeeuuuuuuur'
   },
   {
-    name: 'Royaume-Unis',
+    name: 'Royaume-Uni',
     price: 299,
     description: 'Chaleeeuuuuuuur'
   },
@@ -24,14 +24,5 @@ export const vacances = [
     price: 299,
     description: 'Chaleeeuuuuuuur'
   },
-  {
-    name: 'Suisse',
-    price: 299,
-    description: 'Chaleeeuuuuuuur'
-  },
-  {
-    name: 'Italie',
-    price: 299,
-    description: 'Chaleeeuuuuuuur'
-  }
+
 ];
