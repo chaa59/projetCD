@@ -14,6 +14,6 @@ export class ErreurComponent implements OnInit {
   }
 
   deconnection() {
-    this.router.navigate(['/projet/inscription']);
+    this.router.navigate(['/projet/connexion']);
   }
 }

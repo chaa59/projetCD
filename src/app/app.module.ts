@@ -1,3 +1,4 @@
+import { InscriptionComponent } from './PageConnexion/inscription/inscription.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -11,10 +12,10 @@ import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { PageConnexionComponent } from './PageConnexion/page-connexion.component';
-import { InscriptionComponent } from './PageConnexion/inscription/inscription.component';
 import { HomeComponent } from './PageConnexion/home/home.component';
 import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
 import { ShippingComponent } from './shipping/shipping.component';
+import { ConnexionComponent } from './PageConnexion/connexion/connexion.component';
 
 @NgModule({
   imports: [
@@ -27,11 +28,12 @@ import { ShippingComponent } from './shipping/shipping.component';
       { path: 'vacances/:vacancesId', component: VacancesDetailsComponent },
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent},
-      {
-        path: 'projet', component: PageConnexionComponent, children: [
+      { path: 'projet', component: PageConnexionComponent, children: [
+          { path: 'connexion', component: ConnexionComponent },
           { path: 'inscription', component: InscriptionComponent },
           { path: 'home', component: HomeComponent },
           { path: 'erreur', component: ErreurComponent },
+
         ]
       }
 
@@ -45,10 +47,11 @@ import { ShippingComponent } from './shipping/shipping.component';
     VacancesDetailsComponent,
     CartComponent,
     PageConnexionComponent,
-    InscriptionComponent,
+    ConnexionComponent,
     HomeComponent,
     ErreurComponent,
-    ShippingComponent
+    ShippingComponent,
+    InscriptionComponent
   ],
   bootstrap: [AppComponent],
   providers: [CartService]

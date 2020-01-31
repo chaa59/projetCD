@@ -3,6 +3,17 @@
 	<div class="sidebar">
 		<div class="col-lg-5">
 			<h4 class="sidebar-title">Filtres</h4>
+			<div class="recherche">
+				<section>
+					<label>
+						Choisissez une destination:<br /><br />
+						<input autofocus class="awesomplete"
+							data-list="Espagne, France, Portugal, Royaume-Uni, Italie" />
+
+					</label>
+					<button (click)="search(vacances)">Chercher</button>
+				</section>
+			</div>
 			<ul>
 				<li><span>Date</span></li>
 				<div style="text-align: center;">
@@ -58,7 +69,7 @@
 						<td><input type="button" value="30" onclick="alert('Coucou.')"></td>
 						<td><input type="button" value="31" onclick="alert('Coucou.')"></td>
 					</tr>
-					
+
 				</div>
 				<br>
 				<br>
@@ -74,6 +85,9 @@
 				<td>Min<input type="text" value="min"></td>
 				<br>
 				<td>Max<input type="text" value="max" onclick="alert('Coucou.')"></td>
+				<br>
+				<br>
+				<input type="submit" value="valider" class="btn btn-primary"/>
 
 			</ul>
 			<hr>
@@ -91,7 +105,7 @@
 			<p *ngIf="vacances.description">
 				Description: {{ vacances.description }}
 			</p>
-			
+
 			<hr>
 		</div>
 

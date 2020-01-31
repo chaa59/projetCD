@@ -20,6 +20,7 @@ export class VacancesDetailsComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.vacances = vacances[+params.get('vacancesId')];
     });
+    console.log('vacancesId');
   }
 
   // tslint:disable-next-line:no-shadowed-variable
