@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { VacancesListComponent } from './vacances-list/vacances-list.component';
-import { VacancesDetailsComponent } from './vacances-details/vacances-details.component';
 import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
 import { FilterPipeModule } from 'ngx-filter-pipe';
@@ -15,6 +14,7 @@ import { PageConnexionComponent } from './PageConnexion/page-connexion.component
 import { HomeComponent } from './PageConnexion/home/home.component';
 import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
 import { ShippingComponent } from './shipping/shipping.component';
+import { VacancesSelectComponent } from './vacances-select/vacances-select.component';
 import { ConnexionComponent } from './PageConnexion/connexion/connexion.component';
 
 @NgModule({
@@ -25,11 +25,11 @@ import { ConnexionComponent } from './PageConnexion/connexion/connexion.componen
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: VacancesListComponent },
-      { path: 'vacances/:vacancesId', component: VacancesDetailsComponent },
+      { path: 'vacances/:vacancesId', component: VacancesSelectComponent },
       { path: 'cart', component: CartComponent },
-      { path: 'shipping', component: ShippingComponent},
-      { path: 'projet', component: PageConnexionComponent, children: [
-          { path: 'connexion', component: ConnexionComponent },
+      { path: 'shipping', component: ShippingComponent },
+      {
+        path: 'projet', component: PageConnexionComponent, children: [
           { path: 'inscription', component: InscriptionComponent },
           { path: 'home', component: HomeComponent },
           { path: 'erreur', component: ErreurComponent },
@@ -44,14 +44,13 @@ import { ConnexionComponent } from './PageConnexion/connexion/connexion.componen
     AppComponent,
     TopBarComponent,
     VacancesListComponent,
-    VacancesDetailsComponent,
     CartComponent,
     PageConnexionComponent,
     ConnexionComponent,
     HomeComponent,
     ErreurComponent,
     ShippingComponent,
-    InscriptionComponent
+    VacancesSelectComponent,
   ],
   bootstrap: [AppComponent],
   providers: [CartService]
