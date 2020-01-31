@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { VacancesListComponent } from './vacances-list/vacances-list.component';
-import { VacancesDetailsComponent } from './vacances-details/vacances-details.component';
 import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
 import { FilterPipeModule } from 'ngx-filter-pipe';
@@ -15,6 +14,7 @@ import { InscriptionComponent } from './PageConnexion/inscription/inscription.co
 import { HomeComponent } from './PageConnexion/home/home.component';
 import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
 import { ShippingComponent } from './shipping/shipping.component';
+import { VacancesSelectComponent } from './vacances-select/vacances-select.component';
 
 @NgModule({
   imports: [
@@ -24,9 +24,9 @@ import { ShippingComponent } from './shipping/shipping.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: VacancesListComponent },
-      { path: 'vacances/:vacancesId', component: VacancesDetailsComponent },
+      { path: 'vacances/:vacancesId', component: VacancesSelectComponent },
       { path: 'cart', component: CartComponent },
-      { path: 'shipping', component: ShippingComponent},
+      { path: 'shipping', component: ShippingComponent },
       {
         path: 'projet', component: PageConnexionComponent, children: [
           { path: 'inscription', component: InscriptionComponent },
@@ -42,13 +42,13 @@ import { ShippingComponent } from './shipping/shipping.component';
     AppComponent,
     TopBarComponent,
     VacancesListComponent,
-    VacancesDetailsComponent,
     CartComponent,
     PageConnexionComponent,
     InscriptionComponent,
     HomeComponent,
     ErreurComponent,
-    ShippingComponent
+    ShippingComponent,
+    VacancesSelectComponent,
   ],
   bootstrap: [AppComponent],
   providers: [CartService]

@@ -67,21 +67,6 @@
 }
 
 .image {
-    width: 500px;
+    width: 700px;
     left: 550px;
-}
-
-.image:hover {
-    zoom: 110%;
-    height: 300px;
-    border-right: 5px black;
-}
-
-.case {
-    width: 29px;
-    margin: 1px;
-}
-
-.description {
-    color: white;
 }
