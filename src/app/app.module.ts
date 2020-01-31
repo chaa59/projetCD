@@ -1,21 +1,22 @@
+import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
+import { HomeComponent } from './PageConnexion/home/home.component';
+import { ConnexionComponent } from './PageConnexion/connexion/connexion.component';
 import { InscriptionComponent } from './PageConnexion/inscription/inscription.component';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { PageConnexionComponent } from './PageConnexion/page-connexion.component';
+import { ShippingComponent } from './shipping/shipping.component';
+import { VacancesSelect2Component } from './vacances-select2/vacances-select2.component';
+import { VacancesSelectComponent } from './vacances-select/vacances-select.component';
+import { VacancesListComponent } from './vacances-list/vacances-list.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { VacancesListComponent } from './vacances-list/vacances-list.component';
-import { CartService } from './cart.service';
-import { CartComponent } from './cart/cart.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { FilterPipeModule } from 'ngx-filter-pipe';
-import { PageConnexionComponent } from './PageConnexion/page-connexion.component';
-import { HomeComponent } from './PageConnexion/home/home.component';
-import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
-import { ShippingComponent } from './shipping/shipping.component';
-import { VacancesSelectComponent } from './vacances-select/vacances-select.component';
-import { ConnexionComponent } from './PageConnexion/connexion/connexion.component';
+import { PanierComponent } from './panier/panier.component';
+import { PanierService } from './panier.service';
 
 @NgModule({
   imports: [
@@ -26,13 +27,13 @@ import { ConnexionComponent } from './PageConnexion/connexion/connexion.componen
     RouterModule.forRoot([
       { path: '', component: VacancesListComponent },
       { path: 'vacances/:vacancesId', component: VacancesSelectComponent },
-      { path: 'cart', component: CartComponent },
+      { path: 'vacances2/:vacancesId', component: VacancesSelect2Component },
+      { path: 'panier', component: PanierComponent },
       { path: 'shipping', component: ShippingComponent },
       {
         path: 'projet', component: PageConnexionComponent, children: [
           { path: 'inscription', component: InscriptionComponent },
           { path: 'connexion', component: ConnexionComponent },
-
           { path: 'home', component: HomeComponent },
           { path: 'erreur', component: ErreurComponent },
 
@@ -42,11 +43,12 @@ import { ConnexionComponent } from './PageConnexion/connexion/connexion.componen
 
     ])
   ],
+
   declarations: [
     AppComponent,
     TopBarComponent,
     VacancesListComponent,
-    CartComponent,
+    PanierComponent,
     PageConnexionComponent,
     ConnexionComponent,
     HomeComponent,
@@ -54,10 +56,13 @@ import { ConnexionComponent } from './PageConnexion/connexion/connexion.componen
     ShippingComponent,
     VacancesSelectComponent,
     InscriptionComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    VacancesSelect2Component,
   ],
+
   bootstrap: [AppComponent],
-  providers: [CartService]
+  providers: [PanierService]
+
 })
 export class AppModule { }
 

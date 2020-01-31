@@ -1,3 +1,4 @@
+import { vacances2 } from './../vacances';
 import { Component } from '@angular/core';
 
 import { vacances } from '../vacances';
@@ -10,6 +11,7 @@ import { vacances } from '../vacances';
 })
 export class VacancesListComponent {
   vacances = vacances;
+  vacances2 = vacances2;
 
   disponibility() {
     window.alert('The vacances has been disponible!');
