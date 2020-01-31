@@ -80,10 +80,10 @@
         </div>
     </div>
 
-    <div class="col-lg-7" style="text-align: center;" >
+    <div class="col-lg-7" style="text-align: center;">
 
 
-        <br/>
+        <br />
         <h3>
             <a [title]="vacances.destinationname1 + ' Select'">
                 {{ vacances.destinationname1 }}
@@ -93,11 +93,14 @@
         <p *ngIf="vacances.description1">
             Description: {{ vacances.description1 }}
         </p>
-        <img src="{{vacances.image1}}" alt="image" class="image"/>
+
+        <button (click)="addToCart(vacances)">Buy</button>
+
+        <img src="{{vacances.image1}}" alt="image" class="image" />
         <hr>
 
         <h3>
-            <a [title]="vacances.destinationname2 + ' Select'" >
+            <a [title]="vacances.destinationname2 + ' Select'">
                 {{ vacances.destinationname2 }}
             </a>
         </h3>
@@ -106,7 +109,7 @@
             Description: {{ vacances.description2 }}
         </p>
         <hr>
-        <img src="{{vacances.image2}}" alt="image" class="image"/>
+        <img src="{{vacances.image2}}" alt="image" class="image" />
         <hr>
 
         <h3>
@@ -119,7 +122,7 @@
             Description: {{ vacances.description3 }}
         </p>
         <hr>
-        <img *ngIf="vacances.image3" src="{{vacances.image3}}" alt="image" class="image"/>
+        <img *ngIf="vacances.image3" src="{{vacances.image3}}" alt="image" class="image" />
 
         <hr>
 

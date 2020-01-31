@@ -31,6 +31,8 @@ import { ConnexionComponent } from './PageConnexion/connexion/connexion.componen
       {
         path: 'projet', component: PageConnexionComponent, children: [
           { path: 'inscription', component: InscriptionComponent },
+          { path: 'connexion', component: ConnexionComponent },
+
           { path: 'home', component: HomeComponent },
           { path: 'erreur', component: ErreurComponent },
 
@@ -51,6 +53,8 @@ import { ConnexionComponent } from './PageConnexion/connexion/connexion.componen
     ErreurComponent,
     ShippingComponent,
     VacancesSelectComponent,
+    InscriptionComponent,
+    ConnexionComponent
   ],
   bootstrap: [AppComponent],
   providers: [CartService]
