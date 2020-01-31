@@ -63,15 +63,24 @@
     background: no-repeat center / cover url("../../assets/image/fond1.jpg");
     padding: 0;
     margin: 0;
-    
 }
 
 .image {
-    width: 700px;
+    width: 500px;
     left: 550px;
+}
+
+.image:hover {
+    zoom: 110%;
+    height: 300px;
+    border-right: 5px black;
 }
 
 .case {
     width: 29px;
     margin: 1px;
+}
+
+.description {
+    color: white;
 }

@@ -1,3 +1,4 @@
+import { SharedService } from './../../service/SharedService';
 import { vacances } from '../vacances';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -11,7 +12,7 @@ import { CartService } from '../cart.service';
 export class VacancesSelectComponent implements OnInit {
   vacances;
 
-  constructor(private route: ActivatedRoute, private cartService: CartService ) { }
+  constructor(private route: ActivatedRoute, private cartService: CartService, private sharedService: SharedService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -25,5 +26,9 @@ export class VacancesSelectComponent implements OnInit {
     this.cartService.addToCart(vacances);
   }
 
+  dataname() {
+
+    this.sharedService.data.push(this.dataname.name);
+  }
 
 }

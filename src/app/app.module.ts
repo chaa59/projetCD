@@ -1,8 +1,9 @@
+import { VacancesDataComponent } from './vacances-data/vacances-data.component';
 import { InscriptionComponent } from './PageConnexion/inscription/inscription.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -23,16 +24,18 @@ import { ConnexionComponent } from './PageConnexion/connexion/connexion.componen
     FilterPipeModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
+    FilterPipeModule,
     RouterModule.forRoot([
       { path: '', component: VacancesListComponent },
       { path: 'vacances/:vacancesId', component: VacancesSelectComponent },
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
+      { path: 'vacancesdata/:vacancesdataId', component: VacancesDataComponent },
       {
         path: 'projet', component: PageConnexionComponent, children: [
           { path: 'inscription', component: InscriptionComponent },
           { path: 'connexion', component: ConnexionComponent },
-
           { path: 'home', component: HomeComponent },
           { path: 'erreur', component: ErreurComponent },
 
@@ -54,7 +57,8 @@ import { ConnexionComponent } from './PageConnexion/connexion/connexion.componen
     ShippingComponent,
     VacancesSelectComponent,
     InscriptionComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    VacancesDataComponent
   ],
   bootstrap: [AppComponent],
   providers: [CartService]

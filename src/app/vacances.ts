@@ -87,10 +87,10 @@ export const vacances = [
 
 export const vacances2 = [
   {
-    name: 'Espagne',
+    name: 'Suisse',
     description: 'La chaleur est à son rendez-vous',
     destinationname1: 'Espagne / Granada',
-    image: '../assets/image/espagne.jpg',
+    image: '../assets/image/barcelone.jpg',
     price1: 799,
     description1: 'La chaleur est à son rendez-vous à Granada',
     image1: '../assets/image/granada.jpg',
@@ -167,6 +167,28 @@ export const vacances2 = [
     price3: 299,
     description3: 'Chaleeeuuuuuuur'
 
+  },
+
+];
+
+
+export const datalist = [
+  {
+    name: 'Granada',
+    Granada1 : '01/02/2020 - 15/02/2020',
+    Granada2 : '08/03/2020 - 15/03/2020',
+    Granada3 : '17/04/2020 - 24/04/2020',
+    Granada4 : '01/07/2020 - 15/07/2020',
+    Granada5 : '01/02/2020 - 22/07/2020',
+  },
+
+  {
+    name: 'Barcelona',
+    Granada1 : '01/02/2020 - 15/02/2020',
+    Granada2 : '08/03/2020 - 15/03/2020',
+    Granada3 : '17/04/2020 - 24/04/2020',
+    Granada4 : '01/07/2020 - 15/07/2020',
+    Granada5 : '01/02/2020 - 22/07/2020',
   },
 
 ];
