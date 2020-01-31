@@ -11,7 +11,7 @@ export class PageConnexionComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.router.navigate(['/projet/inscription']);
+    this.router.navigate(['/projet/connexion']);
   }
 
 }

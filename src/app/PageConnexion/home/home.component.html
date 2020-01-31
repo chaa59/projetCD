@@ -1,10 +1,11 @@
 <div class="container" style="text-align: center;">
 	<div align="right">
-		<strong>{{dataList.username}}</strong>
+		
 	</div>
-	<h1>INTI FORMATION</h1>
+	<h1>VOTRE COMPTE</h1>
+	<hr>
 
-	<h1>Vous êtes le bienvenu !</h1>
-	<p>Vous voulez vous déconnecter ?</p>
-	<br /><input type="submit" (click)="deconnection()" value="Déconnexion" />
+	<h1>Vous êtes le bienvenu ! <strong>{{user.name}}</strong></h1>
+	<input type="submit" (click)="retour()" value="Acceder au site" />
+	<p><input type="submit" (click)="deconnection()" value="Déconnexion" /></p>
 </div>

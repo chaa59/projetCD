@@ -16,6 +16,10 @@ export class HomeComponent implements OnInit {
   }
 
   deconnection() {
-    this.router.navigate(['/projet/inscription']);
+    this.router.navigate(['/projet/connexion']);
+  }
+  retour() {
+    this.router.navigate(['/']);
+
   }
 }

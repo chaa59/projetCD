@@ -16,10 +16,7 @@ export class TopBarComponent implements OnInit {
   }
 
   connexion() {
-    this.router.navigate(['/projet/inscription']);
-
-    this.router.navigate(['/projet']);
-
+    this.router.navigate(['/projet/connexion']);
 
   }
 

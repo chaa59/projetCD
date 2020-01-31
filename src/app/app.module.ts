@@ -1,3 +1,4 @@
+import { InscriptionComponent } from './PageConnexion/inscription/inscription.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -10,11 +11,11 @@ import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { PageConnexionComponent } from './PageConnexion/page-connexion.component';
-import { InscriptionComponent } from './PageConnexion/inscription/inscription.component';
 import { HomeComponent } from './PageConnexion/home/home.component';
 import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { VacancesSelectComponent } from './vacances-select/vacances-select.component';
+import { ConnexionComponent } from './PageConnexion/connexion/connexion.component';
 
 @NgModule({
   imports: [
@@ -32,6 +33,7 @@ import { VacancesSelectComponent } from './vacances-select/vacances-select.compo
           { path: 'inscription', component: InscriptionComponent },
           { path: 'home', component: HomeComponent },
           { path: 'erreur', component: ErreurComponent },
+
         ]
       }
 
@@ -44,7 +46,7 @@ import { VacancesSelectComponent } from './vacances-select/vacances-select.compo
     VacancesListComponent,
     CartComponent,
     PageConnexionComponent,
-    InscriptionComponent,
+    ConnexionComponent,
     HomeComponent,
     ErreurComponent,
     ShippingComponent,
