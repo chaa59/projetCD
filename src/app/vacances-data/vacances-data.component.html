@@ -62,7 +62,7 @@
 				</div>
 				<br>
 				<br>
-			 	<li>Lieu</li>
+				<li>Lieu</li>
 				<input type="text" [(ngModel)]="vacancesFilter.name" placeholder="Type to filter by name" />
 				<br>
 				<br>
@@ -72,7 +72,7 @@
 				<td>Max<input type="text" value="max" onclick="alert('Coucou.')"></td>
 				<br>
 				<br>
-				<input type="submit" value="valider" class="btn btn-primary"/>
+				<input type="submit" value="valider" class="btn btn-primary" />
 
 			</ul>
 			<hr>
@@ -80,7 +80,9 @@
 	</div>
 
 	<div class="col-lg-3" style="text-align: center; left: 50px;">
-		<div *ngFor="let vacances of vacances | filterBy: vacancesFilter; index as vacancesId" style="height: 350px;">
+		<!-- <div *ngFor="let data of datalist | filterBy: dataFilter; index as vacancesdataId" style="height: 350px;"> -->
+		<div style="height: 350px;">
+
 
 			<br />
 			<div style=" z-index:1; ">
@@ -92,8 +94,7 @@
 			<div style=" position:relative; top: -180px; left: 60px; z-index:5; opacity: 100%; ">
 
 				<h3>
-					<a [title]="vacances.name + ' details'" [routerLink]="['/vacances', vacancesId]"
-						style="text-shadow: rgb(50,50,50) 2px 2px;">
+					<a [title]="vacancesdata.name + ' details'" style="text-shadow: rgb(50,50,50) 2px 2px;">
 						{{ vacances.name }}
 					</a>
 				</h3>
@@ -101,7 +102,7 @@
 					Description: {{ vacances.description }}
 				</p>
 				<hr>
-				    <!-- in case you want to show empty message -->
+				<!-- in case you want to show empty message -->
 				<!-- <p *ngIf="(vacances | filterBy: vacancesFilter).length === 0">
 					No matching elements
 				</p>  -->

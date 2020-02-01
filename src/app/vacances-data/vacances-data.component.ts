@@ -14,6 +14,7 @@ import { FilterPipe } from 'ngx-filter-pipe';
 export class VacancesDataComponent implements OnInit {
   vacances = vacances;
   vacances2 = vacances2;
+
   namedata: any;
   vacancesdataFilter: any;
 
@@ -23,10 +24,10 @@ export class VacancesDataComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.namedata = this.sharedService.data;
-    if (this.namedata === 'granada') {
-      this.vacancesdataFilter = { name: 'granada' };
-    }
+    // this.namedata = this.sharedService.data;
+    // if (this.namedata === 'granada') {
+    //   this.vacancesdataFilter = { name: 'granada' };
+    // }
   }
 
   disponibility() {

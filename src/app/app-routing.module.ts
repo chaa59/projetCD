@@ -8,6 +8,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ConnexionComponent } from './PageConnexion/connexion/connexion.component';
 
 
+
 const routes: Routes = [
 
   {
@@ -19,8 +20,7 @@ const routes: Routes = [
           { path: 'inscription', component: InscriptionComponent },
           { path: 'home', component: HomeComponent },
           { path: 'erreur', component: ErreurComponent },
-
-        ]
+         ]
       }
     ]
 

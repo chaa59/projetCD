@@ -78,23 +78,24 @@
 
     <div  *ngFor="let vacances of vacances; index as vacancesdataId" class="col-lg-7" style="text-align: center; ">
 
-
+        <h1>Les destinations</h1>
         <br />
         <div style="left: 100px;">
             <h3>
                 <a [title]="vacances.destinationname1 + ' Select'" (click)="dataname()"
-                    [routerLink]="['/vacancesdata', vacancesdataId]">
-                    [ {{ '{' }} vacances.destinationname1 {{ '}' }} ]
+                    [routerLink]="['/vacancesdata']">
+                    <!-- [ {{ '{' }} vacances.destinationname1 {{ '}' }} ] -->
+                    {{vacances.destinationname1}}
                 </a>
             </h3>
             <h4>{{vacances.price1 | currency }}</h4>
             <p *ngIf="vacances.description1">
-                Description: {{ vacances.description1 }}
+                {{ vacances.description1 }}
             </p>
         </div>
 
         <div style="left: 100px;">
-            <button (click)="addToCart(vacances)">Buy</button>
+            <button (click)="addToCart(vacances)">Acheter</button>
 
             <img src="{{vacances.image1}}" alt="image" class="image" />
             <hr>
@@ -105,12 +106,13 @@
                 {{ vacances.destinationname2 }}
             </a>
         </h3>
-        <h4>{{vacances.price2 | currency }}</h4>
-        <p *ngIf="vacances.description2">
-            Description: {{ vacances.description2 }}
-        </p>
-        <hr>
         <img src="{{vacances.image2}}" alt="image" class="image" />
+
+        <h4>{{vacances.price2 | currency }}</h4>
+        <p *ngIf="vacances.description2" style="font-weight: bold;">
+            {{ vacances.description2 }}
+        </p>
+        <button (click)="addToCart(vacances)">Acheter</button>
         <hr>
 
         <h3>
@@ -118,12 +120,14 @@
                 {{ vacances.destinationname3 }}
             </a>
         </h3>
-        <h4>{{vacances.price3 | currency }}</h4>
-        <p *ngIf="vacances.description3">
-            Description: {{ vacances.description3 }}
-        </p>
-        <hr>
         <img *ngIf="vacances.image3" src="{{vacances.image3}}" alt="image" class="image" />
+
+        <h4>{{vacances.price3 | currency }}</h4>
+        <p *ngIf="vacances.description3" style="font-weight: bold;">
+            {{ vacances.description3 }}
+        </p>
+        <button (click)="addToCart(vacances)">Acheter</button>
+
 
         <hr>
 

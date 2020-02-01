@@ -1,9 +1,9 @@
 <div class="banniere"></div>
 <div class="row">
-	<div class="sidebar">
-		<div class="col-lg-4">
-			<h4 class="sclassebar-title">Filtres</h4>
-			<ul>
+    <div class="sidebar">
+        <div class="col-lg-5">
+            <h4 class="sidebar-title">Filtres</h4>
+            <ul>
 				<li><span>Date</span></li>
 				<div style="text-align: center;">
 					<br>
@@ -62,8 +62,12 @@
 				</div>
 				<br>
 				<br>
-			 	<li>Lieu</li>
-				<input type="text" [(ngModel)]="vacancesFilter.name" placeholder="Type to filter by name" />
+				<li>Nombre de passager</li>
+				<input type="text" value="1" />
+				<br>
+				<br>
+				<li>Lieu</li>
+				<input type="text" value="France" />
 				<br>
 				<br>
 				<li>Prix</li>
@@ -75,65 +79,59 @@
 				<input type="submit" value="valider" class="btn btn-primary"/>
 
 			</ul>
-			<hr>
-		</div>
-	</div>
+            <hr>
+        </div>
+    </div>
 
-	<div class="col-lg-3" style="text-align: center; left: 50px;">
-		<div *ngFor="let vacances of vacances | filterBy: vacancesFilter; index as vacancesId" style="height: 350px;">
+    <div class="col-lg-7" style="left: 200px; text-align: center;">
+		<h1>Les destinations</h1>
 
-			<br />
-			<div style=" z-index:1; ">
-				<img src="{{vacances.image}}" alt="image" class="image" style="height: 300px;" />
-			</div>
-			<div
-				style=" position:relative; top:-100px; width: 500px; height:100px; z-index:3; background-color: gray; opacity: 70%;">
-			</div>
-			<div style=" position:relative; top: -180px; left: 60px; z-index:5; opacity: 100%; ">
 
-				<h3>
-					<a [title]="vacances.name + ' details'" [routerLink]="['/vacances', vacancesId]"
-						style="text-shadow: rgb(50,50,50) 2px 2px;">
-						{{ vacances.name }}
-					</a>
-				</h3>
-				<p *ngIf="vacances.description" class="description">
-					{{ vacances.description }}
-				</p>
-				<hr>
-				    <!-- in case you want to show empty message -->
-				<!-- <p *ngIf="(vacances | filterBy: vacancesFilter).length === 0">
-					No matching elements
-				</p>  -->
-			</div>
-		</div>
-	</div>
+        <br />
+        <h3>
+            <a [title]="vacances2.destinationname1 + ' Select'">
+                {{ vacances2.destinationname1 }}
+            </a>
+        </h3>
+        <img src="{{vacances2.image1}}" alt="image" class="image" />
 
-	<div class="col-lg-2" style="text-align: center;"></div>
+        <h4>{{vacances2.price1 | currency }}</h4>
+        <p *ngIf="vacances2.description1">
+            {{ vacances2.description1 }}
+        </p>
 
-	<div class="col-lg-3" style="text-align: center;">
-		<div *ngFor="let vacances2 of vacances2 | filterBy: vacancesFilter; index as vacancesId" style="height: 350px;">
+        <button (click)="addToCart(vacances2)">Buy</button>
 
-			<br />
-			<div style=" z-index:1; ">
-				<img src="{{vacances2.image}}" alt="image" class="image" style="height: 300px;" />
-			</div>
-			<div
-				style=" position:relative; top:-100px; width: 500px; height:100px; z-index:3; background-color: gray; opacity: 70%;">
-			</div>
-			<div style=" position:relative; top: -180px; left: 60px; z-index:5; opacity: 100%; ">
+        <hr>
 
-				<h3>
-					<a [title]="vacances.name2 + ' details'" [routerLink]="['/vacances2', vacancesId]"
-						style="text-shadow: rgb(50,50,50) 2px 2px;">
-						{{ vacances2.name }}
-					</a>
-				</h3>
-				<p *ngIf="vacances2.description" class="description">
-					{{ vacances2.description }}
-				</p>
-				<hr>
-			</div>
-		</div>
-	</div>
+        <h3>
+            <a [title]="vacances2.destinationname2 + ' Select'">
+                {{ vacances2.destinationname2 }}
+            </a>
+        </h3>
+        <img src="{{vacances2.image2}}" alt="image" class="image" />
+
+        <h4>{{vacances2.price2 | currency }}</h4>
+        <p *ngIf="vacances2.description2">
+            {{ vacances2.description2 }}
+        </p>
+        <button (click)="addToCart(vacances)">Buy</button>
+        <hr>
+
+        <h3>
+            <a [title]="vacances2.destinationname3 + ' Select'">
+                {{ vacances2.destinationname3 }}
+            </a>
+        </h3>
+        <img *ngIf="vacances2.image3" src="{{vacances2.image3}}" alt="image" class="image" />
+
+        <h4>{{vacances2.price3 | currency }}</h4>
+        <p *ngIf="vacances2.description3">
+            {{ vacances2.description3 }}
+        </p>
+        <button (click)="addToCart(vacances)">Buy</button>
+
+        <hr>
+
+    </div>
 </div>
