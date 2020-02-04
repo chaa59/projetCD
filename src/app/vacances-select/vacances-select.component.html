@@ -1,160 +1,148 @@
 <div class="banniere"></div>
 <div class="row">
-	<div class="sidebar">
-		<div class="col-lg-5">
-			<h4 class="sidebar-title"></h4>
-				
+    <div class="sidebar">
+        <div class="col-lg-5">
+            <br>
+            <br>
+            <li style="color:teal;">Lieux</li><br />
+            <div style="color: royalblue; font-family: Tahoma;">
+                <b>
+                    <ul>
+                        <li>{{ vacances.destination.destination1.name }}</li>
+                        <li>{{ vacances.destination.destination2.name }}</li>
+                        <li>{{ vacances.destination.destination3.name }}</li>
+                    </ul>
+                </b>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+    <div class="col-lg-7" style="left: 200px; text-align: center;">
+        <h1>Les destinations</h1>
+        <hr>
+        <br />
+        <h3>
+            {{ vacances.name }} /
+            <a [title]="vacances.destination.destination1.name + ' Select'" style="color: red;">
+                <b>{{ vacances.destination.destination1.name }}</b>
+            </a>
+        </h3>
+        <img src="{{vacances.destination.destination1.image}}" alt="image" class="image" />
+        <br /><br />
+        <p *ngIf="vacances.destination.destination1.description" style="font-weight: bold;">
+            <i>{{ vacances.destination.destination1.description }}</i>
+        </p>
+        <table width="100%" bordercolor="#808080" border-inside="vsides" rules="cols">
+            <tr>
+                <td>
+                    <h4>{{vacances.destination.destination1.date.date1.price | currency }}</h4>
+                    <p>{{vacances.destination.destination1.date.date1.depart}}
+                        {{vacances.destination.destination1.date.date1.arrivee}}</p>
+                </td>
+                <td frame="vsides">
+                    <h4>{{vacances.destination.destination1.date.date2.price | currency }}</h4>
+                    <p>{{vacances.destination.destination1.date.date2.depart}}
+                        {{vacances.destination.destination1.date.date2.arrivee}}</p>
+                </td>
+                <td>
+                    <h4>{{vacances.destination.destination1.date.date3.price | currency }}</h4>
+                    <p>{{vacances.destination.destination1.date.date3.depart}}
+                        {{vacances.destination.destination1.date.date3.arrivee}}</p>
+                </td>
+            </tr>
+            <tr>
+                <td> <button (click)="addToCart1()">Acheter</button>
+                </td>
+                <td> <button (click)="addToCart2(vacances)">Acheter</button>
+                </td>
+                <td> <button (click)="addToCart3(vacances)">Acheter</button>
+                </td>
+            </tr>
+        </table>
 
-				<br>
-				<br>
-				<li style="color:teal;">Lieux</li><br/>
-				<div style="color: royalblue; font-family: Tahoma;">
-					<b>
-							<ul>
-								<li>{{ vacances.destinationname1 }}</li>
-								<li>{{ vacances.destinationname2 }}</li>
-								<li>{{ vacances.destinationname3 }}</li>
-							</ul>
-						</b>
-				</div>
-				<br>
-				<br>
+        <hr>
+        <br />
 
+        <h3>
+            {{ vacances.name }} /
+            <a [title]="vacances.destination.destination2.name + ' Select'" style="color: red;">
+                <b>{{ vacances.destination.destination2.name }}</b>
+            </a>
+        </h3>
+        <img src="{{vacances.destination.destination2.image}}" alt="image" class="image" />
+        <br /><br />
+        <p *ngIf="vacances.destination.destination2.description" style="font-weight: bold;">
+            <i>{{ vacances.destination.destination2.description }}</i>
+        </p>
+        <table width="100%" bordercolor="#808080" border-inside="vsides" rules="cols">
+            <tr>
+                <td>
+                    <h4>{{vacances.destination.destination2.date.date1.price | currency }}</h4>
+                    <p>{{vacances.destination.destination2.date.date1.depart}}
+                        {{vacances.destination.destination2.date.date1.arrivee}}</p>
+                </td>
+                <td frame="vsides">
+                    <h4>{{vacances.destination.destination2.date.date2.price | currency }}</h4>
+                    <p>{{vacances.destination.destination2.date.date2.depart}}
+                        {{vacances.destination.destination2.date.date2.arrivee}}</p>
+                </td>
+                <td>
+                    <h4>{{vacances.destination.destination2.date.date3.price | currency }}</h4>
+                    <p>{{vacances.destination.destination2.date.date3.depart}}
+                        {{vacances.destination.destination2.date.date3.arrivee}}</p>
+                </td>
+            </tr>
+            <tr>
+                <td> <button (click)="addToCart1()">Acheter</button>
+                </td>
+                <td> <button (click)="addToCart2(vacances)">Acheter</button>
+                </td>
+                <td> <button (click)="addToCart3(vacances)">Acheter</button>
+                </td>
+            </tr>
+        </table>
 
-			<hr>
-		</div>
-	</div>
+        <hr>
+        <br />
 
-	<div class="col-lg-7" style="left: 200px; text-align: center;">
-		<br/>
-		<h1>Les destinations</h1>
-		<hr>
-
-
-		<br />
-		<h3>
-			{{ vacances.name }} /
-			<a [title]="vacances.destinationname2 + ' Select'" style="color: red;">
-				<b>{{ vacances.destinationname1 }}</b>
-			</a>
-		</h3>
-		<img src="{{vacances.image1}}" alt="image" class="image" />
-		<br /><br />
-		<p *ngIf="vacances.description1" style="font-weight: bold;">
-			<i>{{ vacances.description1 }}</i>
-		</p>
-
-
-		<table width="100%" bordercolor="#808080" border-inside="vsides" rules="cols">
-			<tr>
-				<td>
-					<h4>{{vacances.price11 | currency }}</h4>
-					<p>{{ vacances.periode11 }}</p>
-				</td>
-				<td frame="vsides">
-					<h4>{{vacances.price12 | currency }}</h4>
-					<p>{{ vacances.periode12 }}</p>
-				</td>
-				<td>
-					<h4>{{vacances.price13 | currency }}</h4>
-					<p>{{ vacances.periode13 }}</p>
-				</td>
-			</tr>
-			<tr>
-				<td> <button (click)="addToCart1()">Acheter</button>
-				</td>
-				<td> <button (click)="addToCart2(vacances)">Acheter</button>
-				</td>
-
-				<td> <button (click)="addToCart3(vacances)">Acheter</button>
-				</td>
-			</tr>
-		</table>
-
-
-		<hr>
-		<br/>
-		<h3>
-			{{ vacances.name }} /
-			<a [title]="vacances.destinationname2 + ' Select'" style="color: red;">
-				<b>{{ vacances.destinationname2 }}</b>
-			</a>
-			
-		</h3>
-		<img src="{{vacances.image2}}" alt="image" class="image" />
-		<br /><br />
-		<p *ngIf="vacances.description2" style="font-weight: bold;">
-			<i>{{ vacances.description2 }}</i>
-		</p>
-
-		<table width="100%" bordercolor="#808080" border-inside="vsides" rules="cols">
-			<tr>
-				<td>
-					<h4>{{vacances.price21 | currency }}</h4>
-					<p>{{ vacances.periode21 }}</p>
-				</td>
-				<td frame="vsides">
-					<h4>{{vacances.price22 | currency }}</h4>
-					<p>{{ vacances.periode22 }}</p>
-				</td>
-				<td>
-					<h4>{{vacances.price23 | currency }}</h4>
-					<p>{{ vacances.periode23 }}</p>
-				</td>
-			</tr>
-			<tr>
-				<td style="left: 50px;"> <button (click)="addToCart(vacances)">Acheter</button>
-				</td>
-				<td> <button (click)="addToCart(vacances)">Acheter</button>
-				</td>
-
-				<td> <button (click)="addToCart(vacances)">Acheter</button>
-				</td>
-			</tr>
-		</table>
-
-		<hr>
-		<br/>
-		<h3>
-			{{ vacances.name }} /
-			<a [title]="vacances.destinationname2 + ' Select'" style="color: red;">
-				<b>{{ vacances.destinationname3 }}</b>
-			</a>
-			<br/>
-		</h3>
-		<img *ngIf="vacances.image3" src="{{vacances.image3}}" alt="image" class="image" />
-		<br /><br />
-		<p *ngIf="vacances.description3" style="font-weight: bold;">
-			<i>{{ vacances.description3 }}</i>
-		</p>
-
-		<table width="100%" bordercolor="#808080" border-inside="vsides" rules="cols">
-			<tr>
-				<td>
-					<h4>{{vacances.price31 | currency }}</h4>
-					<p>{{ vacances.periode31 }}</p>
-				</td>
-				<td frame="vsides">
-					<h4>{{vacances.price32 | currency }}</h4>
-					<p>{{ vacances.periode32 }}</p>
-				</td>
-				<td>
-					<h4>{{vacances.price33 | currency }}</h4>
-					<p>{{ vacances.periode33 }}</p>
-				</td>
-			</tr>
-			<tr>
-				<td style="left: 50px;"> <button (click)="addToCart(vacances)">Acheter</button>
-				</td>
-				<td> <button (click)="addToCart(vacances)">Acheter</button>
-				</td>
-
-				<td> <button (click)="addToCart(vacances)">Acheter</button>
-				</td>
-			</tr>
-		</table>
-
-		<hr>
-
-	</div>
+        <h3>
+            {{ vacances.name }} /
+            <a [title]="vacances.destination.destination3.name + ' Select'" style="color: red;">
+                <b>{{ vacances.destination.destination3.name }}</b>
+            </a>
+        </h3>
+        <img src="{{vacances.destination.destination3.image}}" alt="image" class="image" />
+        <br /><br />
+        <p *ngIf="vacances.destination.destination3.description" style="font-weight: bold;">
+            <i>{{ vacances.destination.destination3.description }}</i>
+        </p>
+        <table width="100%" bordercolor="#808080" border-inside="vsides" rules="cols">
+            <tr>
+                <td>
+                    <h4>{{vacances.destination.destination3.date.date1.price | currency }}</h4>
+                    <p>{{vacances.destination.destination3.date.date1.depart}}
+                        {{vacances.destination.destination3.date.date1.arrivee}}</p>
+                </td>
+                <td frame="vsides">
+                    <h4>{{vacances.destination.destination3.date.date2.price | currency }}</h4>
+                    <p>{{vacances.destination.destination3.date.date2.depart}}
+                        {{vacances.destination.destination3.date.date2.arrivee}}</p>
+                </td>
+                <td>
+                    <h4>{{vacances.destination.destination3.date.date3.price | currency }}</h4>
+                    <p>{{vacances.destination.destination3.date.date3.depart}}
+                        {{vacances.destination.destination3.date.date3.arrivee}}</p>
+                </td>
+            </tr>
+            <tr>
+                <td> <button (click)="addToCart1()">Acheter</button>
+                </td>
+                <td> <button (click)="addToCart2(vacances)">Acheter</button>
+                </td>
+                <td> <button (click)="addToCart3(vacances)">Acheter</button>
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>

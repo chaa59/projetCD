@@ -4,107 +4,404 @@ export const vacances = [
     description: 'Large choix de locations de maison de vacances',
     image: '../assets/image/espagne.jpg',
 
+    destination: {
+      destination1:
+      {
+        name: 'Granada',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 899,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 599,
+          },
 
-    destinationname1: 'Granada',
-    description1: 'La chaleur est à son rendez-vous à Granada',
-    image1: '../assets/image/granada.jpg',
+        },
+        description: 'La chaleur est à son rendez-vous à Granada',
+        image: '../assets/image/granada.jpg',
+      },
+      destination2: {
+        name: 'Séville',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
 
-    price11: 799,
-    periode11: '06/03/2020 - 24/03/2020',
+        },
+        image: '../assets/image/seville.jpg',
+        description: 'Chaleeeuuuuuuur à Séville',
 
-    price12: 699,
-    periode12: '06/03/2020 - 24/03/2020',
+      },
+      destination3: {
+        name: 'Barcelona',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
 
-    price13: 399,
-    periode13: '06/03/2020 - 24/03/2020',
+        },
+        image: './assets/image/barcelone.jpg',
+        description: 'belle ville',
 
-
-
-
-    destinationname2: 'Séville',
-    price21: 659,
-    periode21: '06/03/2020 - 24/03/2020',
-    price22: 599,
-    periode22: '06/03/2020 - 24/03/2020',
-    price23: 1099,
-    periode23: '06/03/2020 - 24/03/2020',
-    image2: '../assets/image/seville.jpg',
-    description2: 'Chaleeeuuuuuuur à Séville',
-    destinationname3: 'Barcelona',
-    price31: 299,
-    periode31: '06/03/2020 - 24/03/2020',
-    price32: 499,
-    periode32: '06/03/2020 - 24/03/2020',
-    price33: 339,
-    periode33: '06/03/2020 - 24/03/2020',
-    // tslint:disable-next-line:max-line-length
-    description3: 'Barcelone est la capitale administrative et économique de la Catalogne, de la province de Barcelone, de la comarque du Barcelonès ainsi que de son aire et de sa région métropolitaines, en Espagne.',
-    image3: '../assets/image/barcelone.jpg'
+      },
+    },
 
 
   },
+
   {
     name: 'Portugal',
     description: 'La chaleur est à son rendez-vous',
     image: '../assets/image/portugal.jpg',
-    destinationname1: 'Lisbonne',
-    price1: 799,
-    description1: 'La chaleur est à son rendez-vous à Lisbonne',
-    image1: '../assets/image/lilsbonne.webp',
-    destinationname2: 'Porto',
-    price2: 699,
-    image2: '../assets/image/porto.webp',
-    description2: 'Chaleeeuuuuuuur à Porto',
+
+    destination: {
+      destination1:
+      {
+        name: 'Lisbonne',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+        },
+        description: 'La chaleur est à son rendez-vous à Lisbonne',
+        image: '../assets/image/lilsbonne.webp',
+      },
+      destination2: {
+        name: 'Porto',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        image: '../assets/image/porto.webp',
+        description: 'Chaleeeuuuuuuur à Porto',
+
+      },
+      destination3: {
+        name: 'Évora',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        image: '../assets/image/evora.jpg',
+        description: 'Chaleeeuuuuuuur à Evora',
+
+      },
+    },
   },
   {
     name: 'Royaume-Uni',
     description: 'La chaleur est à son rendez-vous',
-    image: '../assets/image/allemagne.jpg',
-    destinationname1: 'Londres',
-    price1: 799,
-    description1: 'La chaleur est à son rendez-vous',
-    destinationname2: 'Manchester',
-    price2: 699,
-    description2: 'Chaleeeuuuuuuur',
-    image2: '../assets/image/francfort.jpg',
-    destinationname3: 'Leeds',
-    price3: 299,
-    description3: 'Chaleeeuuuuuuur'
+    image: '../assets/image/RU.jpg',
+
+    destination: {
+      destination1:
+      {
+        name: 'Londres',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        image: '../assets/image/evora.jpg',
+        description: 'La chaleur est à son rendez-vous',
+      },
+      destination2: {
+        name: 'Manchester',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'Chaleeeuuuuuuur',
+        image: '../assets/image/francfort.jpg',
+
+      },
+      destination3: {
+        name: 'Swansea',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'Chaleeeuuuuuuur',
+        image: '../assets/image/swansea.jpg',
+
+      },
+    },
 
   },
   {
     name: 'Allemagne',
     description: 'La chaleur est à son rendez-vous',
     image: '../assets/image/allemagne.jpg',
-    destinationname1: 'Berlin',
-    price1: 799,
-    description1: 'La chaleur est à son rendez-vous',
-    image1: '../assets/image/berlin.jpg',
-    destinationname2: 'Francfort',
-    price2: 699,
-    description2: 'Chaleeeuuuuuuur',
-    image2: '../assets/image/francfort.jpg',
-    destinationname3: 'Munich',
-    price3: 299,
-    description3: 'Chaleeeuuuuuuur',
-    image3: '../assets/image/munich.jpg',
+
+    destination: {
+      destination1:
+      {
+        name: 'Berlin',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'La chaleur est à son rendez-vous',
+        image: '../assets/image/berlin.jpg',
+      },
+      destination2: {
+        name: 'Francfort',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'Chaleeeuuuuuuur',
+        image: '../assets/image/francfort.jpg',
+
+      },
+      destination3: {
+        name: 'Munich',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'Chaleeeuuuuuuur',
+        image: '../assets/image/munich.jpg',
+
+      },
+    },
 
   },
   {
     name: 'France',
     description: 'La chaleur est à son rendez-vous',
     image: '../assets/image/france.jpg',
-    destinationname1: 'Paris',
-    price1: 799,
-    description1: 'La chaleur est à son rendez-vous',
-    destinationname2: 'Bordeaux',
-    price2: 699,
-    description2: 'Chaleeeuuuuuuur',
-    image2: '../assets/image/francfort.jpg',
-    destinationname3: 'Lille',
-    price3: 299,
-    description3: 'Chaleeeuuuuuuur'
 
+    destination: {
+      destination1:
+      {
+        name: 'Paris',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'La chaleur est à son rendez-vous',
+        image: '../assets/image/paris.jpg',
+      },
+      destination2: {
+        name: 'Bordeaux',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'Chaleeeuuuuuuur',
+        image: '../assets/image/francfort.jpg',
+
+      },
+      destination3: {
+        name: 'Lille',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'Chaleeeuuuuuuur',
+        image: '../assets/image/lille.jpg',
+
+      },
+    },
   },
 
 ];
@@ -114,149 +411,422 @@ export const vacances2 = [
   {
     name: 'Suisse',
     description: 'La chaleur est à son rendez-vous',
-    destinationname1: 'Berne',
     image: '../assets/image/suisse.jpg',
-    price1: 799,
-    description1: 'La chaleur est à son rendez-vous à Berne',
-    image1: '../assets/image/suisse.jpg',
-    destinationname2: 'Genève',
-    price2: 699,
-    image2: '../assets/image/Geneve.jpg',
-    description2: 'Chaleeeuuuuuuur à Geneve',
-    destinationname3: 'Bâle',
-    price3: 299,
-    description3: 'Chaleeeuuuuuuur à Bale',
-    image3: '../assets/image/Bale.jpeg'
+
+    destination: {
+      destination1:
+      {
+        name: 'Berne',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'La chaleur est à son rendez-vous à Berne',
+        image: '../assets/image/suisse.jpg',
+      },
+      destination2: {
+        name: 'Genève',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        image: '../assets/image/Geneve.jpg',
+        description: 'Chaleeeuuuuuuur à Geneve',
+
+      },
+      destination3: {
+        name: 'Bâle',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'Chaleeeuuuuuuur à Bale',
+        image: '../assets/image/Bale.jpeg'
 
 
+      },
+    },
   },
   {
     name: 'Italie',
     description: 'La chaleur est à son rendez-vous',
     image: '../assets/image/italie.jpg',
-    destinationname1: 'Rome',
-    price1: 799,
-    description1: 'La chaleur est à son rendez-vous à Rome',
-    image1: '../assets/image/rome.webp',
-    destinationname2: 'Milan',
-    price2: 699,
-    image2: '../assets/image/milan.jpg',
-    description2: 'Chaleeeuuuuuuur à Milan',
-    destinationname3: 'Venise',
-    price3: 299,
-    description3: 'Chaleeeuuuuuuur à Venise',
-    image3: '../assets/image/venise.jpg'
 
+    destination: {
+      destination1:
+      {
+        name: 'Rome',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'La chaleur est à son rendez-vous à Rome',
+        image: '../assets/image/rome.webp',
+      },
+      destination2: {
+        name: 'Milan',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        image: '../assets/image/milan.jpg',
+        description: 'Chaleeeuuuuuuur à Milan',
+
+      },
+      destination3: {
+        name: 'Venise',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'Chaleeeuuuuuuur à Venise',
+        image: '../assets/image/venise.jpg'
+
+
+      },
+    },
   },
+
   {
     name: 'Belgique',
     description: 'La chaleur est à son rendez-vous',
     image: '../assets/image/belgique.jpg',
-    destinationname1: 'Bruxelles',
-    price1: 799,
-    description1: 'La chaleur est à son rendez-vous',
-    image1: '../assets/image/Bruxelles.jpg',
-    destinationname2: 'Bruges',
-    price2: 699,
-    description2: 'Chaleeeuuuuuuur',
-    image2: '../assets/image/bruges.jpg',
-    destinationname3: 'Namur',
-    price3: 299,
-    description3: 'Chaleeeuuuuuuur',
-    image3: '../assets/image/Namur.png'
+
+    destination: {
+      destination1:
+      {
+        name: 'Bruxelles',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'La chaleur est à son rendez-vous',
+        image: '../assets/image/Bruxelles.jpg',
+      },
+      destination2: {
+        name: 'Bruges',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'Chaleeeuuuuuuur',
+        image: '../assets/image/bruges.jpg',
+
+      },
+      destination3: {
+        name: 'Namur',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'Chaleeeuuuuuuur',
+        image: '../assets/image/Namur.png'
+
+
+      },
+    },
   },
+
   {
     name: 'Pologne',
     description: 'La chaleur est à son rendez-vous',
     image: '../assets/image/Pologne.jpg',
-    destinationname1: 'Varsovie',
-    price1: 799,
-    description1: 'La chaleur est à son rendez-vous',
-    image1: '../assets/image/Varsovie.jpg',
-    destinationname2: 'Cracovie',
-    price2: 699,
-    description2: 'Chaleeeuuuuuuur',
-    image2: '../assets/image/cracovie.jpeg',
-    destinationname3: 'Poznan',
-    price3: 299,
-    description3: 'Chaleeeuuuuuuur',
-    image3: '../assets/image/Poznan.jpg',
 
+    destination: {
+      destination1:
+      {
+
+
+        name: 'Varsovie',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'La chaleur est à son rendez-vous',
+        image: '../assets/image/Varsovie.jpg',
+      },
+      destination2: {
+        name: 'Cracovie',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'Chaleeeuuuuuuur',
+        image: '../assets/image/cracovie.jpeg',
+
+      },
+      destination3: {
+        name: 'Poznan',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'Chaleeeuuuuuuur',
+        image: '../assets/image/Poznan.jpg',
+
+
+      },
+    },
   },
+
   {
     name: 'Pays-bas',
     description: 'La chaleur est à son rendez-vous',
     image: '../assets/image/pays-bas.jpg',
-    destinationname1: 'Amsterdam',
-    price1: 799,
-    description1: 'La chaleur est à son rendez-vous',
-    image1: '../assets/image/Amsterdam.jpg',
-    destinationname2: 'Rotterdam',
-    price2: 699,
-    description2: 'Chaleeeuuuuuuur',
-    image2: '../assets/image/rotterdam.jpg',
-    destinationname3: 'La Haye',
-    price3: 299,
-    description3: 'Chaleeeuuuuuuur',
-    image3: '../assets/image/la-haye.jpeg',
 
-  },
-
-  {
-    name: 'espagne',
-    image: '',
-    description: '',
     destination: {
       destination1:
       {
-        name: 'granada',
-        description: 'il fait beau',
-        image: '',
-        price:
-        {
-          price1: 654,
-          price2: 584,
-        }
+
+
+
+
+        name: 'Amsterdam',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'La chaleur est à son rendez-vous',
+        image: '../assets/image/Amsterdam.jpg',
       },
-      destination2:
-      {
-        name: 'séville',
-        price:
-        {
-          price1: 654,
-          price2: 584,
-        }
+      destination2: {
+
+
+        name: 'Rotterdam',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'Chaleeeuuuuuuur',
+        image: '../assets/image/rotterdam.jpg',
+
+      },
+      destination3: {
+
+
+        name: 'La Haye',
+        date: {
+          date1: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date2: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+          date3: {
+            depart: '08/15/2022',
+            arrivee: '07/06/2023',
+            price: 799,
+          },
+
+        },
+        description: 'Chaleeeuuuuuuur',
+        image: '../assets/image/la-haye.jpeg',
+
+
       },
     },
   },
 
-  {
-    name: 'espagne',
-    image: '',
-    description: '',
-    destination: {
-      destination1:
-      {
-        name: 'granada',
-        description: 'il fait beau',
-        image: '',
-        price:
-        {
-          price1: 654,
-          price2: 584,
-        }
-      },
-      destination2:
-      {
-        name: 'séville',
-        price:
-        {
-          price1: 654,
-          price2: 584,
-        }
-      },
-    },
-  }
 
 ];
 

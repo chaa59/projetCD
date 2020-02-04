@@ -8,7 +8,6 @@
         font-family: "Trebuchet MS", "Myriad Pro", Arial, sans-serif;
     }
 
-    /** fonts used for the icons **/
     @font-face {
         font-family: 'FontomasCustomRegular';
         src: url('fonts/fontomas-webfont.eot');
@@ -191,30 +190,6 @@
         margin: 5px 0;
     }
 
-
-    /* styling the checkbox "keep me logged in"*/
-    .keeplogin {
-        margin-top: -5px;
-    }
-
-    .keeplogin input,
-    .keeplogin label {
-        display: inline-block;
-        font-size: 12px;
-        font-style: italic;
-    }
-
-    .keeplogin input#loginkeeping {
-        margin-right: 5px;
-    }
-
-    .keeplogin label {
-        width: 80%;
-    }
-
-
-    /*styling the links to change from one form to another */
-
     p.change_link {
         position: absolute;
         color: rgb(127, 124, 124);
@@ -285,7 +260,6 @@
         top: 1px;
     }
 
-    /** Styling both forms **/
     #register,
     #login {
         position: absolute;
@@ -385,50 +359,43 @@
 </style>
 
 <div class="container">
-    <div class="row">
-        <div class="col-lg-3">
-        </div>
-        <div class="col-lg-6">
-            <header style="text-align: center;">
-                <h1>Espace de connexion</h1>
-            </header>
-            <section>
-                <div id="container_demo">
-                    <div id="wrapper">
-                        <div id="login" class="animate form">
-                            <form [formGroup]="form">
-                                <h1>Login</h1>
-                                <p>
-                                    <label for="username" class="uname" data-icon="u"> Email ou login </label>
-                                    <input id="username" formControlName="username" required="required" type="text"
-                                        placeholder="identifiant ou mon-email@gmail.com" />
-                                </p>
-                                <p>
-                                    <label for="pwd" class="youpasswd" data-icon="p"> Mot de passe </label>
-                                    <input id="password" formControlName="pwd" required="required" type="password"
-                                        placeholder="exemple. X8df!90EO" />
-                                </p>
-                                <p class="keeplogin">
-                                    <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
-                                    <label for="loginkeeping">Garder ma session active</label>
-                                </p>
-                                <p class="login button">
-                                    <input type="submit" value="Login" (click)="redirect()" />
-                                </p>
-                                <p class="change_link">
-                                    Pas encore membre ?
-                                    <a class="to_register" (click)="inscription()">Inscrivez-vous</a>
-                                </p>
-                            </form>
-                        </div>
+    <div style="text-align: center;">
+        <header>
+            <h1>Espace de connexion</h1>
+        </header>
+        <hr>
+        <section style="text-align: center;">
+            <div id="container_demo">
+                <div id="wrapper">
+                    <div id="login" class="animate form">
+                        <form [formGroup]="form">
+                            <h1>Login</h1>
+                            <p>
+                                <label for="email" class="uname" data-icon="u"> Email</label>
+                                <input id="email" formControlName="email" required="required" type="text"
+                                    placeholder="mon-email@gmail.com" />
+                            </p>
+                            <p>
+                                <label for="motdepasse" class="motdepasse" data-icon="p"> Mot de passe </label>
+                                <input id="motdepasse" formControlName="motdepasse" required="required" type="password"
+                                    placeholder="exemple. X8df!90EO" />
+                            </p>
+                            <p>
+                                <a [routerLink]="['/projet/mdp']" class="to_register">Mot de passe oublié ?
+                                </a>
+                            </p>
+                            <p class="login button">
+                                <input type="submit" value="Login" (click)="redirect()" />
+                            </p>
+                            <p class="change_link">
+                                Pas encore membre ?
+                                <a class="to_register" (click)="inscription()">Inscrivez-vous</a>
+                            </p>
+                        </form>
                     </div>
                 </div>
-            </section>
-        </div>
-
-        <div class="col-lg-3">
-
-        </div>
+            </div>
+        </section>
     </div>
 </div>
 

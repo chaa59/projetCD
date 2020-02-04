@@ -1,0 +1,33 @@
+<div class="container">
+    <form [formGroup]="form">
+        <div class="card">
+            <div class="card-header">Mot de passe oublié</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label>Email</label>
+                        <input type="text" class="form-control" formControlName="email" id="email" required="required"
+                        type="email"/>
+                        <p *ngIf="form.get('email').invalid && form.get('email').touched" style="color:red">Email est
+                            obligatoire
+                            !</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <input type="submit" value="demander" [disabled]="!form.valid" class="btn btn-success"
+                            (click)="demander()" />
+                    </div>
+                </div>
+                
+                Voici votre mot de passe :
+                {{utilisateur.motdepasse}}
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+<router-outlet></router-outlet>

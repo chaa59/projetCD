@@ -1,3 +1,4 @@
+import { MotDePasseComponent } from './PageConnexion/motDePasse/motDePasse.component';
 import { InscriptionComponent } from './PageConnexion/inscription/inscription.component';
 import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
 import { HomeComponent } from './PageConnexion/home/home.component';
@@ -20,6 +21,8 @@ const routes: Routes = [
           { path: 'inscription', component: InscriptionComponent },
           { path: 'home', component: HomeComponent },
           { path: 'erreur', component: ErreurComponent },
+          { path: 'mdp', component: MotDePasseComponent },
+
          ]
       }
     ]

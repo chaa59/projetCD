@@ -1,4 +1,4 @@
-import { vacances2, vacances3 } from './../vacances';
+import { vacances2 } from './../vacances';
 import { Component } from '@angular/core';
 
 import { vacances } from '../vacances';
@@ -16,9 +16,7 @@ export class VacancesListComponent {
 
   userFilter: any = { name: '' };
 
-  constructor(private filterPipe: FilterPipe) {
-
-  }
+  constructor(private filterPipe: FilterPipe) {}
 
   disponibility() {
     window.alert('The vacances has been disponible!');

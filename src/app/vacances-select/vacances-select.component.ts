@@ -29,7 +29,4 @@ export class VacancesSelectComponent implements OnInit {
 
   }
 
-
-
-
 }

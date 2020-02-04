@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class PageConnexionComponent implements OnInit {
 
+  utilisateurList: any[] = [];
   constructor(private router: Router) { }
 
   ngOnInit() {

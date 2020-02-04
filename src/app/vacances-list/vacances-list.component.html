@@ -1,62 +1,65 @@
 <div class="banniere"></div>
 <div class="row">
-
-    <div class="sidebar">
-        <div class="col-lg-3">
-            <ul>
-            <li>Lieu</li>
-            <input type="text" [(ngModel)]="userFilter.name" placeholder="Type to filter by name"/>
-        </ul>
-        </div>
+	<div class="sidebar">
+		<div class="col-lg-3">
+			<ul>
+				<li>Lieu</li>
+				<input type="text" [(ngModel)]="userFilter.name" placeholder="Type to filter by name" />
+			</ul>
+		</div>
 	</div>
-	
-    <div class="col-lg-3" style="text-align: center; left: 50px;">
-        <div *ngFor="let vacances of vacances | filterBy: userFilter; index as vacancesId" style="height: 350px;">
-            <br />
-            <div style=" z-index:1; ">
-                <img src="{{vacances.image}}" alt="image" class="image" style="height: 300px;" />
-            </div>
-            <div
-                style=" position:relative; top:-100px; width: 500px; height:100px; z-index:3; background-color: gray; opacity: 70%;">
-            </div>
-            <div style=" position:relative; top: -180px; left: 60px; z-index:5; opacity: 100%; ">
-                <h3>
-                    <a [title]="vacances.name + ' details'" [routerLink]="['/vacances', vacancesId]"
-                        style="text-shadow: rgb(50,50,50) 2px 2px;">
-                        {{ vacances.name }}
-                    </a>
-                </h3>
-                <p *ngIf="vacances.description" class="description">
-                    {{ vacances.description }}
-                </p>
-                <hr>
-            </div>
-        </div>
+
+	<div class="col-lg-3" style="text-align: center; left: 50px;">
+		<div *ngFor="let vacances of vacances | filterBy: userFilter; index as vacancesId" style="height: 350px;">
+
+			<br />
+			<div style=" z-index:1; ">
+				<img src="{{vacances.image}}" alt="image" class="image" style="height: 300px;" />
+			</div>
+			<div
+				style=" position:relative; top:-100px; width: 500px; height:100px; z-index:3; background-color: gray; opacity: 70%;">
+			</div>
+			<div style=" position:relative; top: -180px; left: 60px; z-index:5; opacity: 100%; ">
+
+				<h3>
+					<a [title]="vacances.name + ' details'" [routerLink]="['/vacances', vacancesId]"
+						style="text-shadow: rgb(50,50,50) 2px 2px;">
+						{{ vacances.name }}
+					</a>
+				</h3>
+				<p *ngIf="vacances.description" class="description">
+					{{ vacances.description }}
+				</p>
+				<hr>
+			</div>
+		</div>
 	</div>
 	
 	<div class="col-lg-2" style="text-align: center;"></div>
-	
-    <div class="col-lg-3" style="text-align: center;">
-        <div *ngFor="let vacances2 of vacances2 | filterBy: userFilter; index as vacancesId" style="height: 350px;">
-            <br />
-            <div style=" z-index:1; ">
-                <img src="{{vacances2.image}}" alt="image" class="image" style="height: 300px;" />
-            </div>
-            <div
-                style=" position:relative; top:-100px; width: 500px; height:100px; z-index:3; background-color: gray; opacity: 70%;">
-            </div>
-            <div style=" position:relative; top: -180px; left: 60px; z-index:5; opacity: 100%; ">
-                <h3>
-                    <a [title]="vacances.name2 + ' details'" [routerLink]="['/vacances2', vacancesId]"
-                        style="text-shadow: rgb(50,50,50) 2px 2px;">
-                        {{ vacances2.name }}
-                    </a>
-                </h3>
-                <p *ngIf="vacances2.description" class="description">
-                    {{ vacances2.description }}
-                </p>
-                <hr>
-            </div>
-        </div>
-    </div>
+
+	<div class="col-lg-3" style="text-align: center;">
+		<div *ngFor="let vacances2 of vacances2  | filterBy: userFilter; index as vacancesId" style="height: 350px;">
+
+			<br />
+			<div style=" z-index:1; ">
+				<img src="{{vacances2.image}}" alt="image" class="image" style="height: 300px;" />
+			</div>
+			<div
+				style=" position:relative; top:-100px; width: 500px; height:100px; z-index:3; background-color: gray; opacity: 70%;">
+			</div>
+			<div style=" position:relative; top: -180px; left: 60px; z-index:5; opacity: 100%; ">
+
+				<h3>
+					<a [title]="vacances.name2 + ' details'" [routerLink]="['/vacances2', vacancesId]"
+						style="text-shadow: rgb(50,50,50) 2px 2px;">
+						{{ vacances2.name }}
+					</a>
+				</h3>
+				<p *ngIf="vacances2.description" class="description">
+					{{ vacances2.description }}
+				</p>
+				<hr>
+			</div>
+		</div>
+	</div>
 </div>
