@@ -18,6 +18,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { PanierComponent } from './panier/panier.component';
 import { PanierService } from './panier.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   imports: [
@@ -26,10 +28,7 @@ import { PanierService } from './panier.service';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-<<<<<<< HEAD
-    FilterPipeModule,
-=======
->>>>>>> fe41111ee86a8772a37c36db8282cf0c9aaaf986
+    NgbModule,
     RouterModule.forRoot([
       { path: '', component: VacancesListComponent },
       { path: 'vacances/:vacancesId', component: VacancesSelectComponent },

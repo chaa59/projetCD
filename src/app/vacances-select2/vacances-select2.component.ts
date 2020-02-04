@@ -24,19 +24,15 @@ export class VacancesSelect2Component implements OnInit {
       this.vacances2 = vacances2[+params.get('vacancesId')];
     });
 
-    console.log(this.vacances2.destination[0]);
-    console.log(vacances2[5].destination);
-    console.log(vacances2[5].destination.destination1);
-
-
 
   }
 
-  // tslint:disable-next-line:no-shadowed-variable
-  addToCart(vacances2) {
-    window.alert('Your travel has been added to the cart!');
-    this.panierService.addToCart(vacances2);
+  addToCart(pays, name, price, datedepart, datearrivee) {
+    window.alert('Ajouter dans le panier !');
+    var voyage = [pays, name, price, datedepart, datearrivee];
+    this.panierService.addToCart(voyage);
   }
+
 
 
 }

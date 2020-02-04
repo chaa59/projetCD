@@ -21,7 +21,14 @@ export class PanierComponent implements OnInit {
     this.checkoutForm = this.formBuilder.group({
       name: '',
       address: ''
+
     });
+    console.log(this.items);
+    console.log(this.items[0]);
+    console.log(this.items[0][0]);
+
+
+
   }
   onSubmit(customerData) {
     console.warn('Your order has been submitted', customerData);

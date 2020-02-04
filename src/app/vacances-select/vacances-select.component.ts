@@ -15,11 +15,13 @@ export class VacancesSelectComponent implements OnInit {
   vacances;
 
 
-  // tslint:disable-next-line:no-shadowed-variable
-  addToCart(vacances) {
+  addToCart(pays, name, price, datedepart, datearrivee) {
     window.alert('Ajouter dans le panier !');
-    this.panierService.addToCart(vacances.destination);
+    var voyage = [pays, name, price, datedepart, datearrivee];
+    this.panierService.addToCart(voyage);
   }
+
+
   constructor(private route: ActivatedRoute, private panierService: PanierService) { }
 
   ngOnInit() {

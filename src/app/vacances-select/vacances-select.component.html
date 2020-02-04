@@ -19,7 +19,8 @@
         </div>
     </div>
     <div class="col-lg-7" style="left: 200px; text-align: center;">
-        <h1>Les destinations</h1>
+		<br/>
+		<h1>Les destinations</h1>
         <hr>
         <br />
         <h3>
@@ -52,11 +53,11 @@
                 </td>
             </tr>
             <tr>
-                <td> <button (click)="addToCart1()">Acheter</button>
+                <td> <button (click)="addToCart(vacances.name, vacances.destination.destination1.name, vacances.destination.destination1.date.date1.price, vacances.destination.destination1.date.date1.depart, vacances.destination.destination1.date.date1.arrivee)">Acheter</button>
                 </td>
-                <td> <button (click)="addToCart2(vacances)">Acheter</button>
+                <td> <button (click)="addToCart(vacances.name, vacances.destination.destination1.name, vacances.destination.destination1.date.date2.price, vacances.destination.destination1.date.date2.depart, vacances.destination.destination1.date.date2.arrivee)">Acheter</button>
                 </td>
-                <td> <button (click)="addToCart3(vacances)">Acheter</button>
+                <td> <button (click)="addToCart(vacances.name, vacances.destination.destination1.name, vacances.destination.destination1.date.date3.price, vacances.destination.destination1.date.date3.depart, vacances.destination.destination1.date.date3.arrivee)">Acheter</button>
                 </td>
             </tr>
         </table>
@@ -94,12 +95,12 @@
                 </td>
             </tr>
             <tr>
-                <td> <button (click)="addToCart1()">Acheter</button>
-                </td>
-                <td> <button (click)="addToCart2(vacances)">Acheter</button>
-                </td>
-                <td> <button (click)="addToCart3(vacances)">Acheter</button>
-                </td>
+					<td> <button (click)="addToCart(vacances.name, vacances.destination.destination2.name, vacances.destination.destination2.date.date1.price, vacances.destination.destination2.date.date1.depart, vacances.destination.destination2.date.date1.arrivee)">Acheter</button>
+					</td>
+					<td> <button (click)="addToCart(vacances.name, vacances.destination.destination2.name, vacances.destination.destination2.date.date2.price, vacances.destination.destination2.date.date2.depart, vacances.destination.destination2.date.date2.arrivee)">Acheter</button>
+					</td>
+					<td> <button (click)="addToCart(vacances.name, vacances.destination.destination2.name, vacances.destination.destination2.date.date3.price, vacances.destination.destination2.date.date3.depart, vacances.destination.destination2.date.date3.arrivee)">Acheter</button>
+					</td>
             </tr>
         </table>
 
@@ -136,12 +137,12 @@
                 </td>
             </tr>
             <tr>
-                <td> <button (click)="addToCart1()">Acheter</button>
-                </td>
-                <td> <button (click)="addToCart2(vacances)">Acheter</button>
-                </td>
-                <td> <button (click)="addToCart3(vacances)">Acheter</button>
-                </td>
+					<td> <button (click)="addToCart(vacances.name, vacances.destination.destination3.name, vacances.destination.destination3.date.date1.price, vacances.destination.destination3.date.date1.depart, vacances.destination.destination3.date.date1.arrivee)">Acheter</button>
+					</td>
+					<td> <button (click)="addToCart(vacances.name, vacances.destination.destination3.name, vacances.destination.destination3.date.date2.price, vacances.destination.destination3.date.date2.depart, vacances.destination.destination3.date.date2.arrivee)">Acheter</button>
+					</td>
+					<td> <button (click)="addToCart(vacances.name, vacances.destination.destination3.name, vacances.destination.destination3.date.date3.price, vacances.destination.destination3.date.date3.depart, vacances.destination.destination3.date.date3.arrivee)">Acheter</button>
+					</td>
             </tr>
         </table>
     </div>

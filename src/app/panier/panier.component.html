@@ -1,43 +1,3 @@
-<div class="cart-item" *ngFor="let item of items">
-<<<<<<< HEAD
-  <table>
-    <ul>
-      <li><span>{{ item.destinationname1 }}</span><br></li>
-      <li> <span>{{ item.description1}}</span><br>
-      </li>
-      <li> <span>{{ item.price11 | currency }}</span></li>
-      <li> <span>{{ item.price12 | currency }}</span></li>
-      <li> <span>{{ item.price13 | currency }}</span></li>
-
-      
-      <li><span>{{ item.destinationname2 }}</span><br></li>
-      <li> <span>{{ item.description2}}</span><br>
-      </li>
-      <li> <span>{{ item.price21 | currency }}</span></li>
-      <li> <span>{{ item.price22 | currency }}</span></li>
-      <li> <span>{{ item.price23 | currency }}</span></li>
-
-      
-      <li><span>{{ item.destinationname3 }}</span><br></li>
-      <li> <span>{{ item.description3}}</span><br>
-      </li>
-      <li> <span>{{ item.price31 | currency }}</span></li>
-      <li> <span>{{ item.price32 | currency }}</span></li>
-      <li> <span>{{ item.price33 | currency }}</span></li>
-
-      
-    </ul>
-  </table>
-=======
-  <div style="text-align: center;">
-    <p>{{ item.name }}</p>
-    <p>{{ item.price | currency }}</p>
-    <p>{{ item.description}}</p>
-  </div>
->>>>>>> fe41111ee86a8772a37c36db8282cf0c9aaaf986
-
-</div>
-<hr>
 <br>
 <div class="paiement" style="text-align: center;">
   <h1>Mon paiement</h1>
@@ -67,3 +27,76 @@
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
 
 </form>
+
+
+
+
+
+
+<h3>Mon panier</h3>
+<div class="card">
+  <div class="card-header p-1">
+    <button type="button" class="btn btn-link header-link" (click)="editorCollapsed = !editorCollapsed">
+      Informations
+    </button>
+  </div>
+  <div class="card-body" [ngbCollapse]="editorCollapsed" *ngFor="let item of items">
+    <form>
+      <div class="form-row">
+
+        <div class="form-group col-12 col-md-6">
+          <label for="itemName">Pays</label>
+          <input name="itemName" #name="ngModel" type="text" class="form-control" [(ngModel)]="item[0]"
+            required [ngClass]="{'is-invalid': name.invalid && name.touched}">
+        </div>
+
+        <div class="form-group col-12 col-md-6">
+          <label for="itemPrice">Prix</label>
+          <input name="itemPrice" #price="ngModel" type="number" class="form-control"
+            [(ngModel)]="item[2]" required [ngClass]="{'is-invalid': price.invalid && price.touched}">
+        </div>
+
+        <div class="form-group col-12 col-md-6">
+          <label for="itemImage">Destination</label>
+          <input name="itemImage" #img="ngModel" type="text" class="form-control" [(ngModel)]="item[1]"
+            required [ngClass]="{'is-invalid': img.invalid && img.touched}">
+        </div>
+
+        <div class="form-group col-12 col-md-6">
+          <label for="itemQuantity">Nombre de voyageur</label>
+          <input name="itemQuantity" #qnt="ngModel" type="number" class="form-control"
+            [(ngModel)]="itemQuantity" required [ngClass]="{'is-invalid': qnt.invalid && qnt.touched}">
+        </div>
+
+        <div class="form-group col-12 col-md-6">
+          <label for="itemDateD">Date de départ</label>
+          <input name="itemDateD" #qnt="ngModel" type="text" class="form-control"
+            [(ngModel)]="item[3]" required [ngClass]="{'is-invalid': qnt.invalid && qnt.touched}">
+        </div>
+
+        <div class="form-group col-12 col-md-6">
+            <label for="itemDateA">Date d'arrivée</label>
+            <input name="itemDateA" #qnt="ngModel" type="text" class="form-control"
+              [(ngModel)]="item[4]" required [ngClass]="{'is-invalid': qnt.invalid && qnt.touched}">
+          </div>
+          __________________________________________________________________________________________
+
+      </div>
+    </form>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header p-1">
+    <button type="button" class="btn btn-link header-link" (click)="settingsCollapsed = !settingsCollapsed">
+      Modifier mes choix
+    </button>
+  </div>
+
+</div>
+<div class="card">
+  <div class="card-header p-1">
+    <button type="button" class="btn btn-link header-link" (click)="redirect()">
+      Validation
+    </button>
+  </div>
+</div>

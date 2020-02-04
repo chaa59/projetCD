@@ -6,14 +6,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PanierService {
   items = [];
+  price: number;
+  datedepart: string;
+  datearrivee: string;
 
   constructor(
     private http: HttpClient
   ) {}
 
-  addToCart(vacances) {
-    this.items.push(vacances.destination);
+  addToCart(list) {
+    this.items.push(list);
   }
+
   getItems() {
     return this.items;
   }
@@ -22,6 +26,7 @@ export class PanierService {
     this.items = [];
     return this.items;
   }
+  
   getShippingPrices() {
     return this.http.get('../assets/shipping.json');
   }

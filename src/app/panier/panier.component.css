@@ -1,0 +1,11 @@
+.custom-button {
+    border-bottom-left-radius: 2;
+    border-bottom-right-radius: 2;
+    border-top-left-radius: 2;
+    border-top-right-radius: 2;
+    padding: 9px;
+    background-color: coral;
+    color: white;
+    cursor: pointer;
+    border: solid 1px black;
+  }
