@@ -2,6 +2,7 @@ import { vacances2 } from './../vacances';
 import { Component } from '@angular/core';
 
 import { vacances } from '../vacances';
+import { FilterPipe } from 'ngx-filter-pipe';
 
 @Component({
   selector: 'app-vacances-list',
@@ -12,6 +13,10 @@ import { vacances } from '../vacances';
 export class VacancesListComponent {
   vacances = vacances;
   vacances2 = vacances2;
+
+  userFilter: any = { name: '' };
+
+  constructor(private filterPipe: FilterPipe) {}
 
   disponibility() {
     window.alert('The vacances has been disponible!');

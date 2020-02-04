@@ -1,3 +1,4 @@
+import { MotDePasseComponent } from './PageConnexion/motDePasse/motDePasse.component';
 import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
 import { HomeComponent } from './PageConnexion/home/home.component';
 import { ConnexionComponent } from './PageConnexion/connexion/connexion.component';
@@ -8,7 +9,7 @@ import { VacancesSelect2Component } from './vacances-select2/vacances-select2.co
 import { VacancesSelectComponent } from './vacances-select/vacances-select.component';
 import { VacancesListComponent } from './vacances-list/vacances-list.component';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { PanierService } from './panier.service';
     FilterPipeModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: '', component: VacancesListComponent },
       { path: 'vacances/:vacancesId', component: VacancesSelectComponent },
@@ -36,6 +38,8 @@ import { PanierService } from './panier.service';
           { path: 'connexion', component: ConnexionComponent },
           { path: 'home', component: HomeComponent },
           { path: 'erreur', component: ErreurComponent },
+          { path: 'mdp', component: MotDePasseComponent },
+
 
         ]
       }
@@ -58,6 +62,7 @@ import { PanierService } from './panier.service';
     InscriptionComponent,
     ConnexionComponent,
     VacancesSelect2Component,
+    MotDePasseComponent
   ],
 
   bootstrap: [AppComponent],

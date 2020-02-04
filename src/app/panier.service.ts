@@ -12,7 +12,7 @@ export class PanierService {
   ) {}
 
   addToCart(vacances) {
-    this.items.push(vacances);
+    this.items.push(vacances.destination);
   }
   getItems() {
     return this.items;

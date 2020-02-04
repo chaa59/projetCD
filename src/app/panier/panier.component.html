@@ -1,13 +1,9 @@
 <div class="cart-item" *ngFor="let item of items">
-  <table>
-    <ul>
-      <li><span>{{ item.name }}</span><br></li>
-      <li> <span>{{ item.description}}</span><br>
-      </li>
-      <li> <span>{{ item.price | currency }}</span>
-      </li>
-    </ul>
-  </table>
+  <div style="text-align: center;">
+    <p>{{ item.name }}</p>
+    <p>{{ item.price | currency }}</p>
+    <p>{{ item.description}}</p>
+  </div>
 
 </div>
 <hr>

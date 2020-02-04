@@ -23,7 +23,7 @@ export class VacancesSelectComponent implements OnInit {
   // tslint:disable-next-line:no-shadowed-variable
   addToCart(vacances) {
     window.alert('Ajouter dans le panier !');
-    this.panierService.addToCart(vacances);
+    this.panierService.addToCart(vacances.destination);
   }
 
 
