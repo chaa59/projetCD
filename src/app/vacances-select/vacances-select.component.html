@@ -1,135 +1,160 @@
 <div class="banniere"></div>
 <div class="row">
-    <div class="sidebar">
-        <div class="col-lg-5">
-            <h4 class="sidebar-title">Filtres</h4>
-            <ul>
-                <li><span>Date</span></li>
-                <div style="text-align: center;">
-                    <br>
-                    <tr>
-                        <td>L</td>
-                        <td>M</td>
-                        <td>M</td>
-                        <td>J</td>
-                        <td>V</td>
-                        <td>S</td>
-                        <td>D</td>
-                    </tr>
-                    <tr>
-                        <td><input type="button" value="1" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="2" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="3" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="4" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="5" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="6" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="7" onclick="alert('Coucou.')" class="case"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="button" value="8" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="9" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="10" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="11" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="12" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="13" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="14" onclick="alert('Coucou.')" class="case"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="button" value="15" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="16" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="17" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="18" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="19" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="20" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="21" onclick="alert('Coucou.')" class="case"></td>
-                    </tr>
+	<div class="sidebar">
+		<div class="col-lg-5">
+			<h4 class="sidebar-title"></h4>
+				
 
-                    <tr>
-                        <td><input type="button" value="22" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="23" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="24" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="25" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="26" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="27" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="28" onclick="alert('Coucou.')" class="case"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="button" value="29" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="30" onclick="alert('Coucou.')" class="case"></td>
-                        <td><input type="button" value="31" onclick="alert('Coucou.')" class="case"></td>
-                    </tr>
-
-                </div>
-                <br>
-                <br>
-                <li>Lieu</li>
-                <input type="text" value="France" />
-                <br>
-                <br>
-                <li>Prix</li>
-                <td>Min<input type="text" value="min"></td>
-                <br>
-                <td>Max<input type="text" value="max" onclick="alert('Coucou.')"></td>
-
-            </ul>
-            <hr>
-        </div>
-    </div>
-
-    <div  *ngFor="let vacances of vacances; index as vacancesdataId" class="col-lg-7" style="text-align: center; ">
-
-        <h1>Les destinations</h1>
-        <br />
-        <div style="left: 100px;">
-            <h3>
-                <a [title]="vacances.destinationname1 + ' Select'" (click)="dataname()"
-                    [routerLink]="['/vacancesdata']">
-                    <!-- [ {{ '{' }} vacances.destinationname1 {{ '}' }} ] -->
-                    {{vacances.destinationname1}}
-                </a>
-            </h3>
-            <h4>{{vacances.price1 | currency }}</h4>
-            <p *ngIf="vacances.description1">
-                {{ vacances.description1 }}
-            </p>
-        </div>
-
-        <div style="left: 100px;">
-            <button (click)="addToCart(vacances)">Acheter</button>
-
-            <img src="{{vacances.image1}}" alt="image" class="image" />
-            <hr>
-        </div>
-
-        <h3>
-            <a [title]="vacances.destinationname2 + ' Select'">
-                {{ vacances.destinationname2 }}
-            </a>
-        </h3>
-        <img src="{{vacances.image2}}" alt="image" class="image" />
-
-        <h4>{{vacances.price2 | currency }}</h4>
-        <p *ngIf="vacances.description2" style="font-weight: bold;">
-            {{ vacances.description2 }}
-        </p>
-        <button (click)="addToCart(vacances)">Acheter</button>
-        <hr>
-
-        <h3>
-            <a [title]="vacances.destinationname3 + ' Select'">
-                {{ vacances.destinationname3 }}
-            </a>
-        </h3>
-        <img *ngIf="vacances.image3" src="{{vacances.image3}}" alt="image" class="image" />
-
-        <h4>{{vacances.price3 | currency }}</h4>
-        <p *ngIf="vacances.description3" style="font-weight: bold;">
-            {{ vacances.description3 }}
-        </p>
-        <button (click)="addToCart(vacances)">Acheter</button>
+				<br>
+				<br>
+				<li style="color:teal;">Lieux</li><br/>
+				<div style="color: royalblue; font-family: Tahoma;">
+					<b>
+							<ul>
+								<li>{{ vacances.destinationname1 }}</li>
+								<li>{{ vacances.destinationname2 }}</li>
+								<li>{{ vacances.destinationname3 }}</li>
+							</ul>
+						</b>
+				</div>
+				<br>
+				<br>
 
 
-        <hr>
+			<hr>
+		</div>
+	</div>
 
-    </div>
+	<div class="col-lg-7" style="left: 200px; text-align: center;">
+		<br/>
+		<h1>Les destinations</h1>
+		<hr>
+
+
+		<br />
+		<h3>
+			{{ vacances.name }} /
+			<a [title]="vacances.destinationname2 + ' Select'" style="color: red;">
+				<b>{{ vacances.destinationname1 }}</b>
+			</a>
+		</h3>
+		<img src="{{vacances.image1}}" alt="image" class="image" />
+		<br /><br />
+		<p *ngIf="vacances.description1" style="font-weight: bold;">
+			<i>{{ vacances.description1 }}</i>
+		</p>
+
+
+		<table width="100%" bordercolor="#808080" border-inside="vsides" rules="cols">
+			<tr>
+				<td>
+					<h4>{{vacances.price11 | currency }}</h4>
+					<p>{{ vacances.periode11 }}</p>
+				</td>
+				<td frame="vsides">
+					<h4>{{vacances.price12 | currency }}</h4>
+					<p>{{ vacances.periode12 }}</p>
+				</td>
+				<td>
+					<h4>{{vacances.price13 | currency }}</h4>
+					<p>{{ vacances.periode13 }}</p>
+				</td>
+			</tr>
+			<tr>
+				<td> <button (click)="addToCart1()">Acheter</button>
+				</td>
+				<td> <button (click)="addToCart2(vacances)">Acheter</button>
+				</td>
+
+				<td> <button (click)="addToCart3(vacances)">Acheter</button>
+				</td>
+			</tr>
+		</table>
+
+
+		<hr>
+		<br/>
+		<h3>
+			{{ vacances.name }} /
+			<a [title]="vacances.destinationname2 + ' Select'" style="color: red;">
+				<b>{{ vacances.destinationname2 }}</b>
+			</a>
+			
+		</h3>
+		<img src="{{vacances.image2}}" alt="image" class="image" />
+		<br /><br />
+		<p *ngIf="vacances.description2" style="font-weight: bold;">
+			<i>{{ vacances.description2 }}</i>
+		</p>
+
+		<table width="100%" bordercolor="#808080" border-inside="vsides" rules="cols">
+			<tr>
+				<td>
+					<h4>{{vacances.price21 | currency }}</h4>
+					<p>{{ vacances.periode21 }}</p>
+				</td>
+				<td frame="vsides">
+					<h4>{{vacances.price22 | currency }}</h4>
+					<p>{{ vacances.periode22 }}</p>
+				</td>
+				<td>
+					<h4>{{vacances.price23 | currency }}</h4>
+					<p>{{ vacances.periode23 }}</p>
+				</td>
+			</tr>
+			<tr>
+				<td style="left: 50px;"> <button (click)="addToCart(vacances)">Acheter</button>
+				</td>
+				<td> <button (click)="addToCart(vacances)">Acheter</button>
+				</td>
+
+				<td> <button (click)="addToCart(vacances)">Acheter</button>
+				</td>
+			</tr>
+		</table>
+
+		<hr>
+		<br/>
+		<h3>
+			{{ vacances.name }} /
+			<a [title]="vacances.destinationname2 + ' Select'" style="color: red;">
+				<b>{{ vacances.destinationname3 }}</b>
+			</a>
+			<br/>
+		</h3>
+		<img *ngIf="vacances.image3" src="{{vacances.image3}}" alt="image" class="image" />
+		<br /><br />
+		<p *ngIf="vacances.description3" style="font-weight: bold;">
+			<i>{{ vacances.description3 }}</i>
+		</p>
+
+		<table width="100%" bordercolor="#808080" border-inside="vsides" rules="cols">
+			<tr>
+				<td>
+					<h4>{{vacances.price31 | currency }}</h4>
+					<p>{{ vacances.periode31 }}</p>
+				</td>
+				<td frame="vsides">
+					<h4>{{vacances.price32 | currency }}</h4>
+					<p>{{ vacances.periode32 }}</p>
+				</td>
+				<td>
+					<h4>{{vacances.price33 | currency }}</h4>
+					<p>{{ vacances.periode33 }}</p>
+				</td>
+			</tr>
+			<tr>
+				<td style="left: 50px;"> <button (click)="addToCart(vacances)">Acheter</button>
+				</td>
+				<td> <button (click)="addToCart(vacances)">Acheter</button>
+				</td>
+
+				<td> <button (click)="addToCart(vacances)">Acheter</button>
+				</td>
+			</tr>
+		</table>
+
+		<hr>
+
+	</div>
 </div>

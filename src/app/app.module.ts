@@ -1,6 +1,4 @@
-import { SharedService } from './../service/SharedService';
 import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
-import { VacancesDataComponent } from './vacances-data/vacances-data.component';
 import { HomeComponent } from './PageConnexion/home/home.component';
 import { ConnexionComponent } from './PageConnexion/connexion/connexion.component';
 import { InscriptionComponent } from './PageConnexion/inscription/inscription.component';
@@ -34,7 +32,6 @@ import { PanierService } from './panier.service';
       { path: 'vacances2/:vacancesId', component: VacancesSelect2Component },
       { path: 'panier', component: PanierComponent },
       { path: 'shipping', component: ShippingComponent },
-      { path: 'vacancesdata', component: VacancesDataComponent },
       {
         path: 'projet', component: PageConnexionComponent, children: [
           { path: 'inscription', component: InscriptionComponent },
@@ -62,11 +59,11 @@ import { PanierService } from './panier.service';
     VacancesSelectComponent,
     InscriptionComponent,
     ConnexionComponent,
-    VacancesDataComponent
+    VacancesSelect2Component,
   ],
 
   bootstrap: [AppComponent],
-  providers: [PanierService, SharedService]
+  providers: [PanierService]
 
 })
 export class AppModule { }

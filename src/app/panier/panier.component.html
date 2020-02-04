@@ -1,11 +1,30 @@
 <div class="cart-item" *ngFor="let item of items">
   <table>
     <ul>
-      <li><span>{{ item.name }}</span><br></li>
-      <li> <span>{{ item.description}}</span><br>
+      <li><span>{{ item.destinationname1 }}</span><br></li>
+      <li> <span>{{ item.description1}}</span><br>
       </li>
-      <li> <span>{{ item.price | currency }}</span>
+      <li> <span>{{ item.price11 | currency }}</span></li>
+      <li> <span>{{ item.price12 | currency }}</span></li>
+      <li> <span>{{ item.price13 | currency }}</span></li>
+
+      
+      <li><span>{{ item.destinationname2 }}</span><br></li>
+      <li> <span>{{ item.description2}}</span><br>
       </li>
+      <li> <span>{{ item.price21 | currency }}</span></li>
+      <li> <span>{{ item.price22 | currency }}</span></li>
+      <li> <span>{{ item.price23 | currency }}</span></li>
+
+      
+      <li><span>{{ item.destinationname3 }}</span><br></li>
+      <li> <span>{{ item.description3}}</span><br>
+      </li>
+      <li> <span>{{ item.price31 | currency }}</span></li>
+      <li> <span>{{ item.price32 | currency }}</span></li>
+      <li> <span>{{ item.price33 | currency }}</span></li>
+
+      
     </ul>
   </table>
 

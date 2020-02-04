@@ -1,9 +1,9 @@
 <div class="banniere"></div>
 <div class="row">
-    <div class="sidebar">
-        <div class="col-lg-5">
-            <h4 class="sidebar-title">Filtres</h4>
-            <ul>
+	<div class="sidebar">
+		<div class="col-lg-5">
+			<h4 class="sidebar-title">Filtres</h4>
+			<ul>
 				<li><span>Date</span></li>
 				<div style="text-align: center;">
 					<br>
@@ -62,10 +62,6 @@
 				</div>
 				<br>
 				<br>
-				<li>Nombre de passager</li>
-				<input type="text" value="1" />
-				<br>
-				<br>
 				<li>Lieu</li>
 				<input type="text" value="France" />
 				<br>
@@ -76,62 +72,64 @@
 				<td>Max<input type="text" value="max" onclick="alert('Coucou.')"></td>
 				<br>
 				<br>
-				<input type="submit" value="valider" class="btn btn-primary"/>
+				<input type="submit" value="valider" class="btn btn-primary" />
 
 			</ul>
-            <hr>
-        </div>
-    </div>
+			<hr>
+		</div>
+	</div>
 
-    <div class="col-lg-7" style="left: 200px; text-align: center;">
+	<div class="col-lg-7" style="left: 200px; text-align: center;">
 		<h1>Les destinations</h1>
 
+		{{ vacances2 }}.{{ destination }}.{{ destination1 }}.{{ name }}
+		{{ vacances2.destination.destination1.name }}
 
-        <br />
-        <h3>
-            <a [title]="vacances2.destinationname1 + ' Select'">
-                {{ vacances2.destinationname1 }}
-            </a>
-        </h3>
-        <img src="{{vacances2.image1}}" alt="image" class="image" />
+		<br />
+		<h3>
+			<a [title]="vacances2.destinationname1 + ' Select'">
+				{{ vacances2.destinationname1 }}
+			</a>
+		</h3>
+		<img src="{{vacances2.image1}}" alt="image" class="image" />
 
-        <h4>{{vacances2.price1 | currency }}</h4>
-        <p *ngIf="vacances2.description1">
-            {{ vacances2.description1 }}
-        </p>
+		<h4>{{vacances2.price1 | currency }}</h4>
+		<p *ngIf="vacances2.description1">
+			{{ vacances2.description1 }}
+		</p>
 
-        <button (click)="addToCart(vacances2)">Buy</button>
+		<button (click)="addToCart(vacances2)">Buy</button>
 
-        <hr>
+		<hr>
 
-        <h3>
-            <a [title]="vacances2.destinationname2 + ' Select'">
-                {{ vacances2.destinationname2 }}
-            </a>
-        </h3>
-        <img src="{{vacances2.image2}}" alt="image" class="image" />
+		<h3>
+			<a [title]="vacances2.destinationname2 + ' Select'">
+				{{ vacances2.destinationname2 }}
+			</a>
+		</h3>
+		<img src="{{vacances2.image2}}" alt="image" class="image" />
 
-        <h4>{{vacances2.price2 | currency }}</h4>
-        <p *ngIf="vacances2.description2">
-            {{ vacances2.description2 }}
-        </p>
-        <button (click)="addToCart(vacances)">Buy</button>
-        <hr>
+		<h4>{{vacances2.price2 | currency }}</h4>
+		<p *ngIf="vacances2.description2">
+			{{ vacances2.description2 }}
+		</p>
+		<button (click)="addToCart(vacances)">Buy</button>
+		<hr>
 
-        <h3>
-            <a [title]="vacances2.destinationname3 + ' Select'">
-                {{ vacances2.destinationname3 }}
-            </a>
-        </h3>
-        <img *ngIf="vacances2.image3" src="{{vacances2.image3}}" alt="image" class="image" />
+		<h3>
+			<a [title]="vacances2.destinationname3 + ' Select'">
+				{{ vacances2.destinationname3 }}
+			</a>
+		</h3>
+		<img *ngIf="vacances2.image3" src="{{vacances2.image3}}" alt="image" class="image" />
 
-        <h4>{{vacances2.price3 | currency }}</h4>
-        <p *ngIf="vacances2.description3">
-            {{ vacances2.description3 }}
-        </p>
-        <button (click)="addToCart(vacances)">Buy</button>
+		<h4>{{vacances2.price3 | currency }}</h4>
+		<p *ngIf="vacances2.description3">
+			{{ vacances2.description3 }}
+		</p>
+		<button (click)="addToCart(vacances)">Buy</button>
 
-        <hr>
+		<hr>
 
-    </div>
+	</div>
 </div>

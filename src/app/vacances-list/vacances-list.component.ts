@@ -1,4 +1,4 @@
-import { vacances2 } from './../vacances';
+import { vacances2, vacances3 } from './../vacances';
 import { Component } from '@angular/core';
 
 import { vacances } from '../vacances';
@@ -13,11 +13,11 @@ import { FilterPipe } from 'ngx-filter-pipe';
 export class VacancesListComponent {
   vacances = vacances;
   vacances2 = vacances2;
-  vacancesFilter: any = { name: '' };
 
+  userFilter: any = { name: '' };
 
   constructor(private filterPipe: FilterPipe) {
-    console.log(filterPipe.transform(this.vacances, { name: 'M'}));
+
   }
 
   disponibility() {
