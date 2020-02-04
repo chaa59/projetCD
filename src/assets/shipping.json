@@ -1,14 +1,14 @@
 [
   {
-    "type": "Voyage par bateau",
-    "price": 25.99
+    "type": "Par email",
+    "price": 0
   },
   {
-    "type": "Voyage par train",
-    "price": 9.99
+    "type": "par voie postale",
+    "price": 5.99
   },
   {
-    "type": "Voyage par avion",
+    "type": "chez un commerçant",
     "price": 2.99
   }
 ]

@@ -3,7 +3,7 @@
 	<div class="sidebar">
 		<div class="col-lg-3">
 			<ul>
-				<li>lieu</li>
+				<li><h2>Lieu</h2></li>
 				<input type="text" [(ngModel)]="userFilter.name" placeholder="Type to filter by name" />
 			</ul>
 		</div>
@@ -14,7 +14,7 @@
 
 			<br />
 			<div style=" z-index:1; ">
-				<img src="{{vacances.image}}" alt="image" class="image" style="height: 300px;" />
+				<img src="{{vacances.image}}" alt="image" class="image" style="height: 300px;" [routerLink]="['/vacances', vacancesId]" />
 			</div>
 			<div
 				style=" position:relative; top:-100px; width: 500px; height:100px; z-index:3; background-color: gray; opacity: 70%;">
@@ -42,7 +42,7 @@
 
 			<br />
 			<div style=" z-index:1; ">
-				<img src="{{vacances2.image}}" alt="image" class="image" style="height: 300px;" />
+				<img src="{{vacances2.image}}" alt="image" class="image" style="height: 300px;" [routerLink]="['/vacances2', vacancesId]"/>
 			</div>
 			<div
 				style=" position:relative; top:-100px; width: 500px; height:100px; z-index:3; background-color: gray; opacity: 70%;">

@@ -1,0 +1,47 @@
+<div style="text-align: center;">
+    <h3>
+        <p style="text-decoration: underline;">Récapitulatif</p>
+    </h3>
+
+    <div class="shipping-item" *ngFor="let item of items; let i of index">
+        <span>{{ item[0] }}</span>
+        <span>{{ item[1] }}</span>
+        <span>{{ item[2] }}</span>
+        <span>{{ item[3] }}</span>
+
+    </div>
+</div>
+
+
+
+<div class="paiement" style="text-align: center;">
+    <h1>Mon paiement</h1>
+
+    <p style="text-decoration: underline;">Choississez votre type de paiement:</p>
+
+    <div>
+        <input type="checkbox" id="Visa" name="Visa" checked>
+        <label for="Visa">Visa</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="MasterCard" name="MasterCard">
+        <label for="MasterCard">MasterCard</label>
+    </div>
+
+    <br>
+</div>
+<div style="text-align: center;">
+    <h3>
+        <p style="text-decoration: underline;">Prenez connaissance des taxes:</p>
+    </h3>
+
+    <div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+        <span>{{ shipping.type }}</span>
+        <span>{{ shipping.price | currency }}</span>
+    </div>
+</div>
+
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+</form>

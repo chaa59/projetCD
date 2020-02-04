@@ -188,7 +188,7 @@ export const vacances = [
           },
 
         },
-        image: '../assets/image/evora.jpg',
+        image: '../assets/image/Londres.jpg',
         description: 'La chaleur est à son rendez-vous',
       },
       destination2: {
@@ -212,7 +212,7 @@ export const vacances = [
 
         },
         description: 'Chaleeeuuuuuuur',
-        image: '../assets/image/francfort.jpg',
+        image: '../assets/image/manchester.jpg',
 
       },
       destination3: {
@@ -374,7 +374,7 @@ export const vacances = [
 
         },
         description: 'Chaleeeuuuuuuur',
-        image: '../assets/image/francfort.jpg',
+        image: '../assets/image/bordeaux.jpg',
 
       },
       destination3: {
@@ -436,7 +436,7 @@ export const vacances2 = [
 
         },
         description: 'La chaleur est à son rendez-vous à Berne',
-        image: '../assets/image/suisse.jpg',
+        image: '../assets/image/Berne.jpg',
       },
       destination2: {
         name: 'Genève',

@@ -1,3 +1,4 @@
+import { CommandeComponent } from './commande/commande.component';
 import { MotDePasseComponent } from './PageConnexion/motDePasse/motDePasse.component';
 import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
 import { HomeComponent } from './PageConnexion/home/home.component';
@@ -31,7 +32,6 @@ import { PanierService } from './panier.service';
       { path: 'vacances/:vacancesId', component: VacancesSelectComponent },
       { path: 'vacances2/:vacancesId', component: VacancesSelect2Component },
       { path: 'panier', component: PanierComponent },
-      { path: 'shipping', component: ShippingComponent },
       {
         path: 'projet', component: PageConnexionComponent, children: [
           { path: 'inscription', component: InscriptionComponent },
@@ -39,6 +39,8 @@ import { PanierService } from './panier.service';
           { path: 'home', component: HomeComponent },
           { path: 'erreur', component: ErreurComponent },
           { path: 'mdp', component: MotDePasseComponent },
+          { path: 'commande', component: CommandeComponent },
+
 
 
         ]
@@ -57,12 +59,12 @@ import { PanierService } from './panier.service';
     ConnexionComponent,
     HomeComponent,
     ErreurComponent,
-    ShippingComponent,
     VacancesSelectComponent,
     InscriptionComponent,
     ConnexionComponent,
     VacancesSelect2Component,
-    MotDePasseComponent
+    MotDePasseComponent,
+    CommandeComponent
   ],
 
   bootstrap: [AppComponent],

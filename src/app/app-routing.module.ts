@@ -1,3 +1,4 @@
+import { CommandeComponent } from './commande/commande.component';
 import { MotDePasseComponent } from './PageConnexion/motDePasse/motDePasse.component';
 import { InscriptionComponent } from './PageConnexion/inscription/inscription.component';
 import { ErreurComponent } from './PageConnexion/erreur/erreur.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
           { path: 'home', component: HomeComponent },
           { path: 'erreur', component: ErreurComponent },
           { path: 'mdp', component: MotDePasseComponent },
+          { path: 'commande', component: CommandeComponent },
 
          ]
       }
