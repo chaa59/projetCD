@@ -15,9 +15,9 @@ export const vacances = [
             price: 799,
           },
           date2: {
-            depart: '08/15/2022',
-            arrivee: '07/06/2023',
-            price: 899,
+            depart: '09/15/2021',
+            arrivee: '07/08/2023',
+            price: 599,
           },
           date3: {
             depart: '08/15/2022',

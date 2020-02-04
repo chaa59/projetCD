@@ -2,46 +2,77 @@
     <h3>
         <p style="text-decoration: underline;">Récapitulatif</p>
     </h3>
-
-    <div class="shipping-item" *ngFor="let item of items; let i of index">
-        <span>{{ item[0] }}</span>
-        <span>{{ item[1] }}</span>
-        <span>{{ item[2] }}</span>
-        <span>{{ item[3] }}</span>
-
-    </div>
 </div>
 
+<div class="card-body" [ngbCollapse]="editorCollapsed" *ngFor="let item of items" style="text-align: center;">
+    <form>
+        {{ item[0] }}
+        {{ item[1] }}
+        {{ item[2] }}
+        {{ item[3] }}
+        {{ item[4] }}
 
 
+    </form>
+</div>
+
+<form>
+    <div style="text-align: center;">
+        Total: {{resultat}}
+    </div>
+</form>
 <div class="paiement" style="text-align: center;">
     <h1>Mon paiement</h1>
 
     <p style="text-decoration: underline;">Choississez votre type de paiement:</p>
 
-    <div>
-        <input type="checkbox" id="Visa" name="Visa" checked>
-        <label for="Visa">Visa</label>
-    </div>
+    <FORM>
+        <INPUT type="radio" name="paiement" value="MasterCard"> MasterCard
+        <INPUT type="radio" name="paiement" value="Visa"> Visa
+    </FORM>
 
     <div>
-        <input type="checkbox" id="MasterCard" name="MasterCard">
-        <label for="MasterCard">MasterCard</label>
+        <label>Nom</label>
+        <input type="text" name="carte">
+    </div>
+    <div>
+        <label>Numero de carte</label>
+        <input type="number" name="carte">
+    </div>
+    <div>
+        <label>Code de sécurité</label>
+        <input type="number" name="carte">
     </div>
 
     <br>
 </div>
+
 <div style="text-align: center;">
     <h3>
-        <p style="text-decoration: underline;">Prenez connaissance des taxes:</p>
+        <p style="text-decoration: underline;">Frais de livraison:</p>
     </h3>
-
     <div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
         <span>{{ shipping.type }}</span>
         <span>{{ shipping.price | currency }}</span>
     </div>
 </div>
 
+<div style="text-align: center;">
+    <p style="text-decoration: underline;">Choix des frais de livraison </p>
+    <FORM>
+        <INPUT type="radio" name="frais" value="email" (click)="totaux1()"> email
+        <INPUT type="radio" name="frais" value="postale" (click)="totaux2()"> Postale
+        <input type="radio" name="frais" value="magasin" (click)="totaux3()">Magasin
 
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
-</form>
+    </FORM>
+    <hr>
+    Total: {{total}}
+
+</div>
+
+<div class="bouton-final" style="text-align: center;">
+    <input type="submit" class="btn btn-warning" value="PAYER" [routerLink]="['/']">
+</div>
+<br>
+<br>
+<router-outlet></router-outlet>

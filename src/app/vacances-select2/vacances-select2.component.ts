@@ -10,6 +10,12 @@ import { vacances2 } from '../vacances';
 })
 export class VacancesSelect2Component implements OnInit {
   vacances2;
+  name: string;
+  destination: any;
+  destination1: string;
+  price: any;
+  price1: number;
+
 
   constructor(private route: ActivatedRoute, private panierService: PanierService ) { }
 
@@ -18,13 +24,15 @@ export class VacancesSelect2Component implements OnInit {
       this.vacances2 = vacances2[+params.get('vacancesId')];
     });
 
+
   }
 
-  // tslint:disable-next-line:no-shadowed-variable
-  addToCart(vacances2) {
-    window.alert('Your travel has been added to the cart!');
-    this.panierService.addToCart(vacances2);
+  addToCart(pays, name, price, datedepart, datearrivee) {
+    window.alert('Ajouter dans le panier !');
+    var voyage = [pays, name, price, datedepart, datearrivee];
+    this.panierService.addToCart(voyage);
   }
+
 
 
 }

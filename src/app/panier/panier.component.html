@@ -1,10 +1,59 @@
-<div class="cart-item" *ngFor="let item of items">
-  <div style="text-align: center;">
-    <p>{{ item.name }}</p>
-    <p>{{ item.price | currency }}</p>
-    <p>{{ item.description}}</p>
+<h3>Mon panier</h3>
+<div class="card">
+  <div class="card-header p-1">
+    <button type="button" class="btn btn-link header-link" (click)="editorCollapsed = !editorCollapsed">
+      Informations
+    </button>
   </div>
+  <div class="card-body" [ngbCollapse]="editorCollapsed" *ngFor="let item of items">
+    <form>
+      <div class="form-row">
 
+        <div class="form-group col-12 col-md-6">
+          <label for="itemName">Pays</label>
+          <input name="itemName" #name="ngModel" type="text" class="form-control" [(ngModel)]="item[0]" required
+            [ngClass]="{'is-invalid': name.invalid && name.touched}" disabled>
+        </div>
+
+        <div class="form-group col-12 col-md-6">
+          <label for="itemPrice">Prix</label>
+          <input name="itemPrice" #price="ngModel" type="number" class="form-control" [(ngModel)]="item[2]" required
+            [ngClass]="{'is-invalid': price.invalid && price.touched}" disabled>
+        </div>
+
+        <div class="form-group col-12 col-md-6">
+          <label for="itemImage">Destination</label>
+          <input name="itemImage" #img="ngModel" type="text" class="form-control" [(ngModel)]="item[1]" required
+            [ngClass]="{'is-invalid': img.invalid && img.touched}" disabled>
+        </div>
+
+        <div class="form-group col-12 col-md-6">
+          <label for="itemQuantity">Nombre de voyageur</label>
+          <input name="itemQuantity" #qnt="ngModel" type="number" class="form-control" [(ngModel)]="itemQuantity"
+            required [ngClass]="{'is-invalid': qnt.invalid && qnt.touched}">
+        </div>
+
+        <div class="form-group col-12 col-md-6">
+          <label for="itemDateD">Date de départ</label>
+          <input name="itemDateD" #qnt="ngModel" type="text" class="form-control" [(ngModel)]="item[3]" required
+            [ngClass]="{'is-invalid': qnt.invalid && qnt.touched}" disabled>
+        </div>
+
+        <div class="form-group col-12 col-md-6">
+          <label for="itemDateA">Date d'arrivée</label>
+          <input name="itemDateA" #qnt="ngModel" type="text" class="form-control" [(ngModel)]="item[4]" required
+            [ngClass]="{'is-invalid': qnt.invalid && qnt.touched}" disabled>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 
-<a [routerLink]="['/projet/commande']" class="btn btn-danger">Valider</a>
+<div class="card">
+  <div class="card-header p-1">
+    <button type="button" class="btn btn-link" [routerLink]="['/commande']">
+      Validation
+    </button>
+  </div>
+</div> 
+

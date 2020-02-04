@@ -23,7 +23,6 @@ const routes: Routes = [
           { path: 'home', component: HomeComponent },
           { path: 'erreur', component: ErreurComponent },
           { path: 'mdp', component: MotDePasseComponent },
-          { path: 'commande', component: CommandeComponent },
 
          ]
       }

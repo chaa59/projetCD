@@ -5,7 +5,6 @@ import { HomeComponent } from './PageConnexion/home/home.component';
 import { ConnexionComponent } from './PageConnexion/connexion/connexion.component';
 import { InscriptionComponent } from './PageConnexion/inscription/inscription.component';
 import { PageConnexionComponent } from './PageConnexion/page-connexion.component';
-import { ShippingComponent } from './shipping/shipping.component';
 import { VacancesSelect2Component } from './vacances-select2/vacances-select2.component';
 import { VacancesSelectComponent } from './vacances-select/vacances-select.component';
 import { VacancesListComponent } from './vacances-list/vacances-list.component';
@@ -19,6 +18,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { PanierComponent } from './panier/panier.component';
 import { PanierService } from './panier.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   imports: [
@@ -27,11 +28,14 @@ import { PanierService } from './panier.service';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    NgbModule,
     RouterModule.forRoot([
       { path: '', component: VacancesListComponent },
       { path: 'vacances/:vacancesId', component: VacancesSelectComponent },
       { path: 'vacances2/:vacancesId', component: VacancesSelect2Component },
       { path: 'panier', component: PanierComponent },
+      { path: 'commande', component: CommandeComponent },
+
       {
         path: 'projet', component: PageConnexionComponent, children: [
           { path: 'inscription', component: InscriptionComponent },
@@ -39,7 +43,6 @@ import { PanierService } from './panier.service';
           { path: 'home', component: HomeComponent },
           { path: 'erreur', component: ErreurComponent },
           { path: 'mdp', component: MotDePasseComponent },
-          { path: 'commande', component: CommandeComponent },
 
 
 

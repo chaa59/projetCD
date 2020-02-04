@@ -21,10 +21,12 @@ export class PanierComponent implements OnInit {
     this.checkoutForm = this.formBuilder.group({
       name: '',
       address: ''
+
     });
+
   }
   onSubmit(customerData) {
-    console.warn('Your order has been submitted', customerData);
+    console.warn('Votre commande a été effectué', customerData);
     this.items = this.panierService.clearCart();
     this.checkoutForm.reset();
   }
